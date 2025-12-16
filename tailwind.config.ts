@@ -83,9 +83,9 @@ export default {
         "3xl": "1.5rem",
       },
       boxShadow: {
-        'soft': '0 4px 12px hsl(220 60% 12% / 0.08)',
-        'elevated': '0 12px 40px hsl(220 60% 12% / 0.12)',
-        'glow': '0 0 60px hsl(38 35% 75% / 0.2)',
+        'soft': '0 4px 12px hsl(220 25% 20% / 0.08)',
+        'elevated': '0 12px 40px hsl(220 25% 20% / 0.12)',
+        'glow': '0 0 60px hsl(217 35% 58% / 0.15)',
       },
       keyframes: {
         "accordion-down": {
