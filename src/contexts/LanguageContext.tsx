@@ -25,7 +25,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.bookDemo': 'Book Demo',
 
     // Hero
-    'hero.headline': 'Build real ownership — automatically, from every paycheck.',
+    'hero.headline': 'Your Financial Dignity is our Mission. Build your wealth effortlessly with MASAR.',
     'hero.subheadline': 'MASAR helps employees build regulated long-term wealth through payroll investing, employer matching, and simple habit mechanics — designed for non-experts.',
     'hero.trustLine': 'Regulator-first. Partner-led rails. Transparent ownership.',
     'hero.cta.waitlist': 'Join the Waitlist',
@@ -134,7 +134,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.bookDemo': 'احجز عرض',
 
     // Hero
-    'hero.headline': 'ابنِ ملكية حقيقية — تلقائياً، من كل راتب.',
+    'hero.headline': 'كرامتك المالية هي مهمتنا. ابنِ ثروتك بسهولة مع مسار.',
     'hero.subheadline': 'مسار يساعد الموظفين على بناء ثروة طويلة الأجل من خلال الاستثمار عبر الرواتب، ومطابقة صاحب العمل، وآليات بسيطة للعادات — مصمم لغير الخبراء.',
     'hero.trustLine': 'الأولوية للتنظيم. قنوات الشركاء. ملكية شفافة.',
     'hero.cta.waitlist': 'انضم لقائمة الانتظار',
