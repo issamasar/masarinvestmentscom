@@ -4,6 +4,7 @@ import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
+import masarLogo from '@/assets/masar-logo.jpeg';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,13 +29,12 @@ export function Header() {
       <nav className="container-wide">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <span className="font-serif text-2xl md:text-3xl font-medium text-primary">
-              MASAR
-            </span>
-            <span className="font-serif text-xl md:text-2xl text-muted-foreground">
-              مسار
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={masarLogo} 
+              alt="MASAR مسار" 
+              className="h-10 md:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
