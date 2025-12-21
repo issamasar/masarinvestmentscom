@@ -53,7 +53,7 @@ const translations: Record<Language, Record<string, string>> = {
     'how.disclaimer': 'Capital at risk. Distributions variable. No guaranteed returns.',
 
     // Employers
-    'employers.title': 'A benefit your team will use — without rebuilding your payroll stack.',
+    'employers.title': 'A benefit your team will use, without rebuilding your payroll stack.',
     'employers.subtitle': 'Turn-Key Savings Benefit',
     'employers.tier1.title': 'File/CSV Fast Start',
     'employers.tier1.desc': 'Zero engineering required',
@@ -162,7 +162,7 @@ const translations: Record<Language, Record<string, string>> = {
     'how.disclaimer': 'رأس المال في خطر. التوزيعات متغيرة. لا عوائد مضمونة.',
 
     // Employers
-    'employers.title': 'ميزة سيستخدمها فريقك — بدون إعادة بناء نظام الرواتب.',
+    'employers.title': 'ميزة سيستخدمها فريقك، بدون إعادة بناء نظام الرواتب.',
     'employers.subtitle': 'ميزة ادخار جاهزة',
     'employers.tier1.title': 'بداية سريعة بملف',
     'employers.tier1.desc': 'لا حاجة للبرمجة',
