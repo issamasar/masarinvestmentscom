@@ -4,7 +4,7 @@ import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
-import masarLogo from '@/assets/masar-logo.jpeg';
+import masarLogo from '@/assets/masar-logo-light.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,8 +32,8 @@ export function Header() {
           <Link to="/" className="flex items-center">
             <img 
               src={masarLogo} 
-              alt="MASAR مسار" 
-              className="h-10 md:h-12 w-auto"
+              alt="MASAR Logo" 
+              className="h-12 w-auto"
             />
           </Link>
 
