@@ -3,35 +3,27 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
 import { ArrowRight } from 'lucide-react';
-
 export default function About() {
-  const { t } = useLanguage();
-
-  const values = [
-    {
-      title: 'Dignity',
-      desc: 'Everyone deserves access to wealth-building tools, regardless of starting point.',
-    },
-    {
-      title: 'Transparency',
-      desc: 'Clear information, no jargon, no hidden fees. You always know where you stand.',
-    },
-    {
-      title: 'Discipline',
-      desc: 'Small, consistent steps beat sporadic big moves. We design for habits, not heroics.',
-    },
-    {
-      title: 'Partnerability',
-      desc: 'We succeed when our partners succeed. Non-exclusive, collaborative, open.',
-    },
-    {
-      title: 'Regulator-First',
-      desc: 'Compliance is not an afterthought. We build for trust from day one.',
-    },
-  ];
-
-  return (
-    <Layout>
+  const {
+    t
+  } = useLanguage();
+  const values = [{
+    title: 'Dignity',
+    desc: 'Everyone deserves access to wealth-building tools, regardless of starting point.'
+  }, {
+    title: 'Transparency',
+    desc: 'Clear information, no jargon, no hidden fees. You always know where you stand.'
+  }, {
+    title: 'Discipline',
+    desc: 'Small, consistent steps beat sporadic big moves. We design for habits, not heroics.'
+  }, {
+    title: 'Partnerability',
+    desc: 'We succeed when our partners succeed. Non-exclusive, collaborative, open.'
+  }, {
+    title: 'Regulator-First',
+    desc: 'Compliance is not an afterthought. We build for trust from day one.'
+  }];
+  return <Layout>
       {/* Hero */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container-wide">
@@ -59,9 +51,7 @@ export default function About() {
                 In Jordan and across the region, millions of working people have jobs, earn income, and pay their bills — but never build real ownership. Investing feels complicated, expensive, or simply out of reach.
               </p>
               
-              <p className="text-lg leading-relaxed mb-6">
-                We started MASAR because we believe this doesn't have to be the case. The infrastructure exists. Digital identity is maturing. Payroll systems are digitizing. The missing piece is a simple, trusted bridge that connects working people to regulated investment — automatically, affordably, and with dignity.
-              </p>
+              <p className="text-lg leading-relaxed mb-6">We started MASAR because we believe this doesn't have to be the case. The infrastructure exists. Digital identity is maturing. Payroll systems are digitizing. The missing piece is a simple, trusted bridge that connects working people to regulated investment  automatically, affordably, and with dignity.</p>
               
               <p className="text-lg leading-relaxed">
                 MASAR is that bridge. We turn paychecks into ownership through habit-forming mechanics, employer matching, and regulator-native design. No trading expertise required. No financial background needed. Just consistent progress toward a more secure future.
@@ -110,16 +100,12 @@ export default function About() {
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {values.map((value, index) => (
-              <div 
-                key={value.title}
-                className="card-elevated p-6 animate-fade-up"
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
+            {values.map((value, index) => <div key={value.title} className="card-elevated p-6 animate-fade-up" style={{
+            animationDelay: `${index * 50}ms`
+          }}>
                 <h3 className="text-xl font-serif text-foreground mb-3">{value.title}</h3>
                 <p className="text-muted-foreground">{value.desc}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -148,6 +134,5 @@ export default function About() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 }
