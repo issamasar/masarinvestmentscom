@@ -26,7 +26,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     'hero.headline': 'Your Financial Dignity is our Mission.',
-    'hero.subheadline': 'MASAR helps employees build regulated long-term wealth through payroll investing, employer matching, and simple habit mechanics — designed for non-experts.',
+    'hero.subheadline': 'MASAR helps employees build regulated long-term wealth through payroll investing, employer matching, and simple habit mechanics designed for non-experts.',
     'hero.trustLine': 'Regulator-first. Partner-led rails. Transparent ownership.',
     'hero.cta.waitlist': 'Join the Waitlist',
     'hero.cta.demo': 'Book Employer Demo',
@@ -135,7 +135,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     'hero.headline': 'كرامتك المالية هي مهمتنا.',
-    'hero.subheadline': 'مسار يساعد الموظفين على بناء ثروة طويلة الأجل من خلال الاستثمار عبر الرواتب، ومطابقة صاحب العمل، وآليات بسيطة للعادات — مصمم لغير الخبراء.',
+    'hero.subheadline': 'مسار يساعد الموظفين على بناء ثروة طويلة الأجل من خلال الاستثمار عبر الرواتب، ومطابقة صاحب العمل، وآليات بسيطة للعادات مصمم لغير الخبراء.',
     'hero.trustLine': 'الأولوية للتنظيم. قنوات الشركاء. ملكية شفافة.',
     'hero.cta.waitlist': 'انضم لقائمة الانتظار',
     'hero.cta.demo': 'احجز عرض لصاحب العمل',
