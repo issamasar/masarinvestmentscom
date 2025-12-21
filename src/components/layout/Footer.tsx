@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { toast } from 'sonner';
+import masarLogo from '@/assets/masar-logo.jpeg';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -44,9 +45,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-4">
-              <span className="font-serif text-3xl font-medium">
-                MASAR <span className="text-champagne">مسار</span>
-              </span>
+              <img src={masarLogo} alt="MASAR Logo" className="h-12 w-auto rounded" />
             </Link>
             <p className="text-primary-foreground/70 max-w-sm mb-6">
               {t('footer.description')}
