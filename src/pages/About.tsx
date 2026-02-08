@@ -123,7 +123,7 @@ export default function About() {
             <Link to="/waitlist">
               <Button variant="champagne" size="xl">
                 {t('hero.cta.waitlist')}
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
               </Button>
             </Link>
             <Link to="/contact">

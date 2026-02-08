@@ -38,7 +38,7 @@ export default function Employers() {
               <Link to="/demo">
                 <Button variant="champagne" size="xl">
                   {t('hero.cta.demo')}
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
                 </Button>
               </Link>
               <Button variant="heroOutline" size="xl">
@@ -216,7 +216,7 @@ export default function Employers() {
               <Link to="/demo">
                 <Button variant="default" size="lg" className="w-full">
                   Schedule Demo
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
                 </Button>
               </Link>
             </div>
@@ -237,7 +237,7 @@ export default function Employers() {
             <Link to="/demo">
               <Button variant="champagne" size="xl">
                 {t('hero.cta.demo')}
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
               </Button>
             </Link>
             <Button variant="heroOutline" size="xl">

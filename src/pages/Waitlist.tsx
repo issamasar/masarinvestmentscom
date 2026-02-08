@@ -165,7 +165,7 @@ export default function Waitlist() {
                 
                 <Button type="submit" variant="default" size="lg" className="w-full">
                   Join Waitlist
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
                 </Button>
                 
                 <p className="text-xs text-muted-foreground text-center">

@@ -149,7 +149,7 @@ export default function Insights() {
           </p>
           <Link to="/contact" className="inline-flex items-center gap-2 text-primary font-medium hover:underline">
             Subscribe to MASAR Insights
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 rtl:rotate-180" />
           </Link>
         </div>
       </section>
