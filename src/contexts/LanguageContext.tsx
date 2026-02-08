@@ -29,7 +29,7 @@ const translations: Record<Language, Record<string, string>> = {
     'disclaimer.full': 'Capital at risk. Distributions variable. No guaranteed returns.',
 
     // Home — Hero
-    'home.hero.headline': 'Set it once. Your salary, your spending, your employer\'s match — all quietly building your future while you sleep.',
+    'home.hero.headline': 'Set it once. Watch it Grow.\nYour hard work, building your future while you sleep.',
     'home.hero.body': 'MASAR turns small, recurring cashflows from your paycheck and daily spending into real, regulated investment assets. No expertise required. No complexity. Just consistent, compounding progress.',
     'home.hero.trustline': 'Regulator-first · Partner-led rails · Transparent ownership',
 
@@ -367,7 +367,7 @@ const translations: Record<Language, Record<string, string>> = {
     'disclaimer.full': 'رأس المال في خطر. التوزيعات متغيرة. لا عوائد مضمونة.',
 
     // Home — Hero
-    'home.hero.headline': 'اضبطه مرة واحدة. راتبك، مصاريفك، ومساهمة صاحب العمل — كلها تبني مستقبلك بهدوء وأنت نائم.',
+    'home.hero.headline': 'اضبطه مرة واحدة. شاهده ينمو.\nجهدك وتعبك، يبني مستقبلك وأنت نائم.',
     'home.hero.body': 'مسار يحوّل التدفقات النقدية الصغيرة والمتكررة من راتبك ومصاريفك اليومية إلى أصول استثمارية حقيقية ومنظمة. لا حاجة لخبرة. لا تعقيد. فقط تقدم ثابت ومتراكم.',
     'home.hero.trustline': 'الأولوية للتنظيم · قنوات الشركاء · ملكية شفافة',
 
