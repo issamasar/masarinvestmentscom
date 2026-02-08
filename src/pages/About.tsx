@@ -3,136 +3,110 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
 import { ArrowRight } from 'lucide-react';
+
 export default function About() {
-  const {
-    t
-  } = useLanguage();
-  const values = [{
-    title: 'Dignity',
-    desc: 'Everyone deserves access to wealth-building tools, regardless of starting point.'
-  }, {
-    title: 'Transparency',
-    desc: 'Clear information, no jargon, no hidden fees. You always know where you stand.'
-  }, {
-    title: 'Discipline',
-    desc: 'Small, consistent steps beat sporadic big moves. We design for habits, not heroics.'
-  }, {
-    title: 'Partnerability',
-    desc: 'We succeed when our partners succeed. Non-exclusive, collaborative, open.'
-  }, {
-    title: 'Regulator-First',
-    desc: 'Compliance is not an afterthought. We build for trust from day one.'
-  }];
-  return <Layout>
+  const { t } = useLanguage();
+
+  const values = [
+    { title: t('about.values.1.title'), desc: t('about.values.1.desc') },
+    { title: t('about.values.2.title'), desc: t('about.values.2.desc') },
+    { title: t('about.values.3.title'), desc: t('about.values.3.desc') },
+    { title: t('about.values.4.title'), desc: t('about.values.4.desc') },
+  ];
+
+  return (
+    <Layout>
       {/* Hero */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-wide">
-          <div className="max-w-3xl animate-fade-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight mb-6">
-              About MASAR
-            </h1>
-            <p className="text-xl text-primary-foreground/80">
-              Building ownership, one paycheck at a time.
-            </p>
-          </div>
+      <section className="section-padding bg-white">
+        <div className="container-content max-w-3xl animate-fade-up">
+          <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-serif leading-[1.1] mb-4">{t('about.hero.headline')}</h1>
+          <p className="text-lg text-muted-foreground">{t('about.hero.sub')}</p>
         </div>
       </section>
 
       {/* Why MASAR Exists */}
-      <section className="section-padding bg-background">
-        <div className="container-narrow">
-          <div className="animate-fade-up">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-8">
-              Why MASAR Exists
-            </h2>
-            
-            <div className="prose prose-lg max-w-none text-muted-foreground">
-              <p className="text-lg leading-relaxed mb-6">
-                In Jordan and across the region, millions of working people have jobs, earn income, and pay their bills — but never build real ownership. Investing feels complicated, expensive, or simply out of reach.
-              </p>
-              
-              <p className="text-lg leading-relaxed mb-6">We started MASAR because we believe this doesn't have to be the case. The infrastructure exists. Digital identity is maturing. Payroll systems are digitizing. The missing piece is a simple, trusted bridge that connects working people to regulated investment  automatically, affordably, and with dignity.</p>
-              
-              <p className="text-lg leading-relaxed">
-                MASAR is that bridge. We turn paychecks into ownership through habit-forming mechanics, employer matching, and regulator-native design. No trading expertise required. No financial background needed. Just consistent progress toward a more secure future.
-              </p>
-            </div>
+      <section className="section-padding bg-cream">
+        <div className="container-narrow animate-fade-up">
+          <div className="space-y-6 text-muted-foreground leading-relaxed text-[17px]">
+            <p>{t('about.why.p1')}</p>
+            <p>{t('about.why.p2')}</p>
+            <p>{t('about.why.p3')}</p>
           </div>
         </div>
       </section>
 
-      {/* Founder Note */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container-narrow">
-          <div className="card-elevated p-8 md:p-12 animate-fade-up">
-            <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-6">
-              A Note From the Founder
-            </h2>
-            
-            <blockquote className="text-lg text-muted-foreground leading-relaxed mb-6">
-              "I've spent my career at the intersection of finance and technology. The thing that always struck me was how much complexity we've built into something that should be simple: helping people save and invest.
-              <br /><br />
-              MASAR is my attempt to strip away that complexity. We're not trying to turn everyone into traders. We're trying to make ownership accessible to people who work hard and deserve a fair shot at building wealth.
-              <br /><br />
-              This is a long journey. We're starting in Jordan, but our ambition is regional. Every step of the way, we'll prioritize trust, transparency, and partnership. I hope you'll join us."
-            </blockquote>
-            
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-champagne/30 flex items-center justify-center">
-                <span className="font-serif text-lg text-foreground">M</span>
-              </div>
-              <div>
-                <p className="font-medium text-foreground">Founder</p>
-                <p className="text-sm text-muted-foreground">MASAR</p>
-              </div>
-            </div>
+      {/* Founder */}
+      <section className="section-padding bg-white">
+        <div className="container-narrow text-center animate-fade-up">
+          <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center mx-auto mb-6">
+            <span className="text-2xl font-serif text-navy">ID</span>
           </div>
+          <p className="text-lg font-semibold text-navy mb-1">{t('about.founder.name')}</p>
+          <p className="text-sm text-muted-foreground mb-8">{t('about.founder.role')}</p>
+          <blockquote className="text-xl font-serif italic text-navy leading-relaxed max-w-2xl mx-auto">
+            "{t('about.founder.quote')}"
+          </blockquote>
         </div>
       </section>
 
       {/* Values */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="text-center mb-12 animate-fade-up">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground">
-              Our Values
-            </h2>
+      <section className="section-padding bg-cream">
+        <div className="container-content">
+          <h2 className="text-3xl md:text-[40px] font-serif text-center mb-12 animate-fade-up">{t('about.values.title')}</h2>
+          <div className="grid sm:grid-cols-2 gap-8">
+            {values.map((v, i) => (
+              <div key={v.title} className="card-masar border border-border/50 animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+                <h3 className="text-lg font-semibold text-navy mb-2">{v.title}</h3>
+                <p className="text-sm text-muted-foreground">{v.desc}</p>
+              </div>
+            ))}
           </div>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {values.map((value, index) => <div key={value.title} className="card-elevated p-6 animate-fade-up" style={{
-            animationDelay: `${index * 50}ms`
-          }}>
-                <h3 className="text-xl font-serif text-foreground mb-3">{value.title}</h3>
-                <p className="text-muted-foreground">{value.desc}</p>
-              </div>)}
+        </div>
+      </section>
+
+      {/* Vision */}
+      <section className="section-padding bg-white">
+        <div className="container-content max-w-3xl animate-fade-up">
+          <h2 className="text-3xl md:text-[40px] font-serif mb-6">{t('about.vision.title')}</h2>
+          <p className="text-muted-foreground leading-relaxed mb-8">{t('about.vision.body')}</p>
+
+          {/* Roadmap */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 text-center">
+            <div className="flex-1 rounded-xl bg-teal-light border border-primary/20 py-4 px-6">
+              <p className="text-sm font-semibold text-primary mb-1">{t('about.roadmap.1.title')}</p>
+              <p className="text-xs text-muted-foreground">{t('about.roadmap.1.label')}</p>
+            </div>
+            <ArrowRight className="w-5 h-5 text-muted-foreground hidden sm:block rtl:rotate-180" />
+            <div className="flex-1 rounded-xl bg-muted py-4 px-6">
+              <p className="text-sm font-semibold text-navy mb-1">{t('about.roadmap.2.title')}</p>
+              <p className="text-xs text-muted-foreground">{t('about.roadmap.2.label')}</p>
+            </div>
+            <ArrowRight className="w-5 h-5 text-muted-foreground hidden sm:block rtl:rotate-180" />
+            <div className="flex-1 rounded-xl bg-muted py-4 px-6">
+              <p className="text-sm font-semibold text-navy mb-1">{t('about.roadmap.3.title')}</p>
+              <p className="text-xs text-muted-foreground">{t('about.roadmap.3.label')}</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-narrow text-center animate-fade-up">
-          <h2 className="text-3xl md:text-4xl font-serif mb-6">
-            Join the Journey
-          </h2>
-          <p className="text-xl text-primary-foreground/80 mb-8">
-            Whether you're an individual, employer, or potential partner — we'd love to hear from you.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/waitlist">
-              <Button variant="champagne" size="xl">
-                {t('hero.cta.waitlist')}
-                <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
+      <section className="section-padding bg-cream">
+        <div className="container-content text-center animate-fade-up">
+          <h2 className="text-3xl md:text-[40px] font-serif mb-8">{t('about.cta.headline')}</h2>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link to="/contact">
+              <Button size="lg">
+                {t('cta.joinWaitlist')}
+                <ArrowRight className="w-4 h-4 ms-1 rtl:rotate-180" />
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="heroOutline" size="xl">
-                Contact Us
-              </Button>
+              <Button variant="outline" size="lg">{t('about.cta.contact')}</Button>
             </Link>
           </div>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  );
 }

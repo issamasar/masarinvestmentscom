@@ -2,19 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
-import { 
-  FileText, 
-  Plug, 
-  Palette,
-  ArrowRight,
-  CheckCircle2,
-  Users,
-  Settings,
-  ClipboardCheck,
-  BarChart3,
-  Mail,
-  Calendar
-} from 'lucide-react';
+import { Zap, BarChart3, Shield, ArrowRight } from 'lucide-react';
 
 export default function Employers() {
   const { t } = useLanguage();
@@ -22,230 +10,189 @@ export default function Employers() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-wide">
-          <div className="max-w-3xl animate-fade-up">
-            <p className="text-champagne font-medium tracking-wide uppercase text-sm mb-4">
-              {t('employers.subtitle')}
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight mb-6">
-              {t('employers.title')}
-            </h1>
-            <p className="text-xl text-primary-foreground/80 mb-8">
-              Deploy in weeks, not quarters. No engineering required for basic setup.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/demo">
-                <Button variant="champagne" size="xl">
-                  {t('hero.cta.demo')}
-                  <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
-                </Button>
-              </Link>
-              <Button variant="heroOutline" size="xl">
-                Request Pilot One-Pager
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Tiers */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="text-center mb-12 animate-fade-up">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
-              Deploy in Weeks, Not Quarters
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose your integration depth. Start simple, scale up.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                tier: 'Tier 1',
-                title: t('employers.tier1.title'),
-                desc: t('employers.tier1.desc'),
-                icon: FileText,
-                features: ['CSV upload', 'Manual reconciliation', 'Basic reporting', 'Email support'],
-                timeline: '1-2 weeks',
-              },
-              {
-                tier: 'Tier 2',
-                title: t('employers.tier2.title'),
-                desc: t('employers.tier2.desc'),
-                icon: Plug,
-                features: ['REST APIs', 'Webhooks', 'Automated reconciliation', 'Priority support'],
-                timeline: '4-6 weeks',
-                highlighted: true,
-              },
-              {
-                tier: 'Tier 3',
-                title: t('employers.tier3.title'),
-                desc: t('employers.tier3.desc'),
-                icon: Palette,
-                features: ['Your brand, our engine', 'Full customization', 'Dedicated account', 'SLA guarantees'],
-                timeline: '8-12 weeks',
-              },
-            ].map((tier, index) => (
-              <div 
-                key={tier.tier}
-                className={`card-elevated p-6 animate-fade-up ${tier.highlighted ? 'ring-2 ring-cta' : ''}`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                    {tier.tier}
-                  </span>
-                  {tier.highlighted && (
-                    <span className="text-xs font-medium text-cta bg-cta/10 px-2 py-0.5 rounded-full">
-                      Popular
-                    </span>
-                  )}
-                </div>
-                <div className="w-12 h-12 rounded-xl bg-champagne/20 flex items-center justify-center mb-4">
-                  <tier.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-serif text-foreground mb-2">{tier.title}</h3>
-                <p className="text-muted-foreground mb-4">{tier.desc}</p>
-                <ul className="space-y-2 mb-6">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm">
-                      <CheckCircle2 className="w-4 h-4 text-cta flex-shrink-0" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-4 border-t border-border">
-                  <span className="text-sm text-muted-foreground">Timeline: </span>
-                  <span className="text-sm font-medium text-foreground">{tier.timeline}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Employer Console Features */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container-wide">
-          <div className="text-center mb-12 animate-fade-up">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
-              Employer Console Features
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Everything you need to manage your employee savings benefit.
-            </p>
-          </div>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: Users, title: 'Eligibility & Cohorts', desc: 'Define who qualifies and segment by department, tenure, or role' },
-              { icon: Settings, title: 'Matching Policy Engine', desc: 'Set caps, rules, vesting schedules, and pause conditions' },
-              { icon: FileText, title: 'Payroll Instructions', desc: 'Generate clear instructions for your payroll team' },
-              { icon: ClipboardCheck, title: 'Reconciliation & Audit', desc: 'Full audit trail with dispute resolution support' },
-              { icon: BarChart3, title: 'Reporting Dashboard', desc: 'Real-time insights on participation and contributions' },
-              { icon: Mail, title: 'Employee Comms Pack', desc: 'Ready-to-send materials to announce and educate' },
-            ].map((feature, index) => (
-              <div 
-                key={feature.title}
-                className="card-elevated p-6 animate-fade-up"
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                <div className="w-10 h-10 rounded-lg bg-champagne/20 flex items-center justify-center mb-4">
-                  <feature.icon className="w-5 h-5 text-primary" />
-                </div>
-                <h3 className="font-serif text-lg text-foreground mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
+      <section className="section-padding bg-white">
+        <div className="container-content max-w-3xl animate-fade-up">
+          <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-serif leading-[1.1] mb-6">{t('emp.hero.headline')}</h1>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">{t('emp.hero.body')}</p>
+          <Link to="/contact#demo">
+            <Button size="lg">
+              {t('cta.bookDemo')}
+              <ArrowRight className="w-4 h-4 ms-1 rtl:rotate-180" />
+            </Button>
+          </Link>
         </div>
       </section>
 
       {/* Why Employers Choose MASAR */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-up">
-              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6">
-                Why Employers Choose MASAR
-              </h2>
-              <div className="space-y-6">
-                {[
-                  {
-                    title: 'Retention & Engagement',
-                    desc: 'Financial benefits that employees actually use and value.',
-                  },
-                  {
-                    title: 'Zero Payroll Rebuild',
-                    desc: 'Works with your existing systems — no massive integration project.',
-                  },
-                  {
-                    title: 'Compliance Built-In',
-                    desc: 'Regulator-native design means you can trust the governance.',
-                  },
-                  {
-                    title: 'Modern Benefit Positioning',
-                    desc: 'Attract talent with forward-thinking financial wellness.',
-                  },
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-cta flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-medium text-foreground mb-1">{item.title}</h3>
-                      <p className="text-muted-foreground">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
+      <section className="section-padding bg-cream">
+        <div className="container-content">
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: Zap, title: t('emp.why.1.title'), desc: t('emp.why.1.desc') },
+              { icon: BarChart3, title: t('emp.why.2.title'), desc: t('emp.why.2.desc') },
+              { icon: Shield, title: t('emp.why.3.title'), desc: t('emp.why.3.desc') },
+            ].map((item, i) => (
+              <div key={item.title} className="animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+                <item.icon className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
+                <h3 className="text-lg font-semibold text-navy mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm">{item.desc}</p>
               </div>
-            </div>
-            
-            <div className="card-elevated p-8 animate-fade-up delay-200">
-              <div className="flex items-center gap-4 mb-6">
-                <Calendar className="w-8 h-8 text-champagne" />
-                <div>
-                  <h3 className="font-serif text-xl text-foreground">Book a Demo</h3>
-                  <p className="text-sm text-muted-foreground">30-minute walkthrough</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integration Tiers */}
+      <section className="section-padding bg-white">
+        <div className="container-content">
+          <h2 className="text-3xl md:text-[40px] font-serif text-center mb-4 animate-fade-up">{t('emp.tiers.title')}</h2>
+          <p className="text-center text-muted-foreground mb-12 animate-fade-up">{t('emp.tiers.subtitle')}</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                tag: t('emp.tiers.1.tag'), title: t('emp.tiers.1.title'),
+                features: [t('emp.tiers.1.f1'), t('emp.tiers.1.f2'), t('emp.tiers.1.f3')],
+                best: t('emp.tiers.1.best'),
+              },
+              {
+                tag: t('emp.tiers.2.tag'), title: t('emp.tiers.2.title'),
+                features: [t('emp.tiers.2.f1'), t('emp.tiers.2.f2'), t('emp.tiers.2.f3')],
+                best: t('emp.tiers.2.best'),
+              },
+              {
+                tag: t('emp.tiers.3.tag'), title: t('emp.tiers.3.title'),
+                features: [t('emp.tiers.3.f1'), t('emp.tiers.3.f2'), t('emp.tiers.3.f3')],
+                best: t('emp.tiers.3.best'),
+              },
+            ].map((tier, i) => (
+              <div key={tier.tag} className="card-masar border border-border/50 animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+                <span className="inline-block text-xs font-medium text-primary bg-teal-light px-2.5 py-1 rounded-full mb-4">{tier.tag}</span>
+                <h3 className="text-xl font-semibold text-navy mb-4">{tier.title}</h3>
+                <ul className="space-y-2 mb-6">
+                  {tier.features.map((f) => (
+                    <li key={f} className="text-sm text-muted-foreground flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span> {f}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-xs text-muted-foreground border-t border-border pt-4">{tier.best}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Employer Dashboard */}
+      <section className="section-padding bg-cream">
+        <div className="container-content">
+          <h2 className="text-3xl md:text-[40px] font-serif text-center mb-3 animate-fade-up">{t('emp.dashboard.title')}</h2>
+          <p className="text-center text-muted-foreground mb-12 animate-fade-up">{t('emp.dashboard.subtitle')}</p>
+
+          {/* Dashboard mockup */}
+          <div className="card-masar p-8 mb-12 animate-fade-up delay-100">
+            <DashboardMockup />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { title: t('emp.dashboard.f1.title'), desc: t('emp.dashboard.f1.desc') },
+              { title: t('emp.dashboard.f2.title'), desc: t('emp.dashboard.f2.desc') },
+              { title: t('emp.dashboard.f3.title'), desc: t('emp.dashboard.f3.desc') },
+            ].map((f, i) => (
+              <div key={f.title} className="animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+                <h3 className="text-base font-semibold text-navy mb-2">{f.title}</h3>
+                <p className="text-sm text-muted-foreground">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How To Get Started */}
+      <section className="section-padding bg-white">
+        <div className="container-content max-w-3xl">
+          <div className="flex flex-col md:flex-row items-start gap-8 animate-fade-up">
+            {[
+              { num: '1', title: t('emp.start.1.title'), desc: t('emp.start.1.desc') },
+              { num: '2', title: t('emp.start.2.title'), desc: t('emp.start.2.desc') },
+              { num: '3', title: t('emp.start.3.title'), desc: t('emp.start.3.desc') },
+            ].map((step, i) => (
+              <div key={step.num} className="flex-1 text-center">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-medium mx-auto mb-4">
+                  {step.num}
                 </div>
+                <h3 className="text-base font-semibold text-navy mb-2">{step.title}</h3>
+                <p className="text-sm text-muted-foreground">{step.desc}</p>
+                {i < 2 && <div className="hidden md:block w-full h-px bg-border mt-8" />}
               </div>
-              <p className="text-muted-foreground mb-6">
-                See how MASAR can work for your organization. No commitment, just a conversation.
-              </p>
-              <Link to="/demo">
-                <Button variant="default" size="lg" className="w-full">
-                  Schedule Demo
-                  <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
-                </Button>
-              </Link>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Employer Outcomes (navy) */}
+      <section className="section-padding bg-navy">
+        <div className="container-content text-center">
+          <p className="text-xl md:text-2xl font-serif text-white max-w-3xl mx-auto mb-12 leading-relaxed italic animate-fade-up">
+            {t('emp.outcomes.quote')}
+          </p>
+          <div className="grid grid-cols-3 gap-8 animate-fade-up delay-100">
+            {[
+              { num: t('emp.outcomes.1.num'), label: t('emp.outcomes.1.label') },
+              { num: t('emp.outcomes.2.num'), label: t('emp.outcomes.2.label') },
+              { num: t('emp.outcomes.3.num'), label: t('emp.outcomes.3.label') },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-3xl font-serif text-white mb-1">{stat.num}</p>
+                <p className="text-sm text-gray-400">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-narrow text-center animate-fade-up">
-          <h2 className="text-3xl md:text-4xl font-serif mb-6">
-            Ready to modernize your benefits?
-          </h2>
-          <p className="text-xl text-primary-foreground/80 mb-8">
-            Let's discuss how MASAR can work for your team.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/demo">
-              <Button variant="champagne" size="xl">
-                {t('hero.cta.demo')}
-                <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
-              </Button>
-            </Link>
-            <Button variant="heroOutline" size="xl">
-              Request Pilot One-Pager
+      <section className="section-padding bg-cream">
+        <div className="container-content text-center animate-fade-up">
+          <h2 className="text-3xl md:text-[40px] font-serif mb-8">{t('emp.cta.headline')}</h2>
+          <Link to="/contact#demo">
+            <Button size="lg">
+              {t('cta.bookDemo')}
+              <ArrowRight className="w-4 h-4 ms-1 rtl:rotate-180" />
             </Button>
-          </div>
+          </Link>
         </div>
       </section>
     </Layout>
+  );
+}
+
+function DashboardMockup() {
+  return (
+    <svg viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+      {/* Top metrics */}
+      <rect x="0" y="0" width="180" height="80" rx="10" fill="#f9fafb" stroke="#e5e7eb" strokeWidth="1" />
+      <text x="20" y="30" fill="#9ca3af" fontSize="11" fontFamily="DM Sans">Enrollment Rate</text>
+      <text x="20" y="60" fill="#1a1a2e" fontSize="24" fontFamily="DM Sans" fontWeight="600">78%</text>
+
+      <rect x="200" y="0" width="180" height="80" rx="10" fill="#f9fafb" stroke="#e5e7eb" strokeWidth="1" />
+      <text x="220" y="30" fill="#9ca3af" fontSize="11" fontFamily="DM Sans">Total AUM</text>
+      <text x="220" y="60" fill="#1a1a2e" fontSize="24" fontFamily="DM Sans" fontWeight="600">JOD 1.2M</text>
+
+      {/* Bar chart */}
+      <rect x="420" y="0" width="380" height="140" rx="10" fill="#f9fafb" stroke="#e5e7eb" strokeWidth="1" />
+      <text x="440" y="25" fill="#9ca3af" fontSize="11" fontFamily="DM Sans">Contribution Trends</text>
+      {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
+        <rect key={i} x={455 + i * 40} y={130 - (40 + Math.random() * 60)} width="24" height={40 + Math.random() * 60} rx="3" fill="#16a085" opacity={0.7 + i * 0.03} />
+      ))}
+
+      {/* Donut chart placeholder */}
+      <rect x="0" y="100" width="380" height="200" rx="10" fill="#f9fafb" stroke="#e5e7eb" strokeWidth="1" />
+      <text x="20" y="125" fill="#9ca3af" fontSize="11" fontFamily="DM Sans">Participation by Department</text>
+      <circle cx="190" cy="210" r="60" fill="none" stroke="#e5e7eb" strokeWidth="12" />
+      <circle cx="190" cy="210" r="60" fill="none" stroke="#16a085" strokeWidth="12" strokeDasharray="200 377" strokeDashoffset="0" />
+      <circle cx="190" cy="210" r="60" fill="none" stroke="#d4a843" strokeWidth="12" strokeDasharray="100 377" strokeDashoffset="-200" />
+      <circle cx="190" cy="210" r="60" fill="none" stroke="#6b7280" strokeWidth="12" strokeDasharray="77 377" strokeDashoffset="-300" />
+    </svg>
   );
 }
