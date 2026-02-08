@@ -238,6 +238,21 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.lang = language;
+
+    // Update document title and meta description for Arabic
+    if (language === 'ar') {
+      document.title = 'مسار | MASAR – كرامتك المالية هي مهمتنا';
+      document.querySelector('meta[name="description"]')?.setAttribute(
+        'content',
+        'مسار يساعد الموظفين على بناء ثروة طويلة الأجل من خلال الاستثمار عبر الرواتب ومطابقة صاحب العمل وآليات بسيطة للعادات.'
+      );
+    } else {
+      document.title = 'MASAR | مسار – Your Financial Dignity is Our Mission';
+      document.querySelector('meta[name="description"]')?.setAttribute(
+        'content',
+        'MASAR helps employees build regulated long-term wealth through payroll investing, employer matching, and simple habit mechanics designed for non-experts.'
+      );
+    }
   }, [language]);
 
   const t = (key: string): string => {

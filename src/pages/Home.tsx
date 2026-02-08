@@ -38,7 +38,7 @@ export default function Home() {
                 <Link to="/waitlist">
                   <Button variant="champagne" size="xl" className="w-full sm:w-auto">
                     {t('hero.cta.waitlist')}
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
                   </Button>
                 </Link>
                 <Link to="/demo">
@@ -57,7 +57,7 @@ export default function Home() {
               </div>
               
               {/* Floating Stats Card */}
-              <div className="absolute -bottom-6 -left-6 bg-card rounded-xl p-6 shadow-elevated animate-float">
+              <div className="absolute -bottom-6 -start-6 bg-card rounded-xl p-6 shadow-elevated animate-float">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-champagne/20 flex items-center justify-center">
                     <TrendingUp className="w-6 h-6 text-primary" />
@@ -218,7 +218,7 @@ export default function Home() {
               <Link to="/demo">
                 <Button variant="champagne" size="lg">
                   {t('hero.cta.demo')}
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
                 </Button>
               </Link>
             </div>
@@ -264,7 +264,7 @@ export default function Home() {
               <Link to="/waitlist">
                 <Button variant="champagne" size="xl">
                   {t('finalCta.individuals')}
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
                 </Button>
               </Link>
               <Link to="/demo">

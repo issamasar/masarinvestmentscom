@@ -101,7 +101,7 @@ export default function Trust() {
                 ].map((item, index) => 
                   item.arrow ? (
                     <div key={index} className="hidden md:flex justify-center">
-                      <ArrowRight className="w-6 h-6 text-champagne" />
+                      <ArrowRight className="w-6 h-6 text-champagne rtl:rotate-180" />
                     </div>
                   ) : (
                     <div key={index} className="text-center">
@@ -232,7 +232,7 @@ export default function Trust() {
           <Link to="/contact">
             <Button variant="champagne" size="xl">
               Get in Touch
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ms-2 rtl:rotate-180" />
             </Button>
           </Link>
         </div>
