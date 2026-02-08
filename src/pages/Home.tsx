@@ -48,6 +48,7 @@ export default function Home() {
         <div className="container-content">
           <div className="grid lg:grid-cols-[55%_45%] gap-12 lg:gap-16 items-center py-16 md:py-24">
             <div className="animate-fade-up">
+              <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-4">{t('home.hero.brand')}</p>
               <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-serif leading-[1.1] mb-6 whitespace-pre-line">
                 {t('home.hero.headline')}
               </h1>
