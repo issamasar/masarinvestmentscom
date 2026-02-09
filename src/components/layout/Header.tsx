@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
-import masarLogo from '@/assets/masar-logo-new.png';
+import masarLogo from '@/assets/masar-logo-light.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
