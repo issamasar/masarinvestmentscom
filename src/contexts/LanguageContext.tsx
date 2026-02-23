@@ -103,7 +103,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.steps.1.desc': 'Verify your identity digitally through SANAD. KYC and AML compliance are built in. The process takes minutes, not days, and is fully digital.',
     'hiw.steps.2.title': 'Set Your Rules',
     'hiw.steps.2.desc': 'Choose your payroll split, activate round-ups on your bank card. If your employer offers matching, it activates automatically. You decide the rules once, and they run every cycle.',
-    'hiw.steps.3.title': 'Your Money Enters the Fund',
+    'hiw.steps.3.title': 'Invest',
     'hiw.steps.3.desc': 'Your contributions are pooled into the MASAR Umbrella Fund — a JSC-authorized, open-ended mutual fund. You choose one or more of three sleeves. Units are purchased at the daily Net Asset Value. Every unit is recorded at the Securities Depository Center.',
     'hiw.steps.4.title': 'Track and Grow',
     'hiw.steps.4.desc': 'See your units, their current value, your contribution streak, and distribution history — all in plain Arabic and English. Distributions are automatically reinvested unless you opt for cash. Your money compounds while you focus on your life.',
