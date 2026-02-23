@@ -60,7 +60,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Home — Two Paths
     'home.paths.individuals.label': 'For Individuals',
     'home.paths.individuals.title': 'Your paycheck can build more than a bank balance.',
-    'home.paths.individuals.body': 'Payroll investing, round-ups from daily spending, and employer matching — all flowing into regulated fund units that grow while you focus on what matters.',
+    'home.paths.individuals.body': 'Payroll investing, round-ups from daily spending, and employer matching, all flowing into regulated fund units that grow while you focus on what matters.',
     'home.paths.individuals.link': 'See how it works →',
     'home.paths.employers.label': 'For Employers',
     'home.paths.employers.title': 'A benefit your team will actually use.',
