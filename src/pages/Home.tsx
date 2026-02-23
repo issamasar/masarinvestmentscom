@@ -34,8 +34,8 @@ function HeroIllustration() {
 
       {/* Label */}
       <text x="340" y="40" fill="#1a1a2e" fontSize="14" fontFamily="DM Sans, sans-serif" fontWeight="500">Your Fund Units</text>
-    </svg>
-  );
+    </svg>);
+
 }
 
 export default function Home() {
@@ -84,16 +84,16 @@ export default function Home() {
         <div className="container-content">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { num: t('stats.1.num'), label: t('stats.1.label') },
-              { num: t('stats.2.num'), label: t('stats.2.label') },
-              { num: t('stats.3.num'), label: t('stats.3.label') },
-              { num: t('stats.4.num'), label: t('stats.4.label') },
-            ].map((stat) => (
-              <div key={stat.label}>
+            { num: t('stats.1.num'), label: t('stats.1.label') },
+            { num: t('stats.2.num'), label: t('stats.2.label') },
+            { num: t('stats.3.num'), label: t('stats.3.label') },
+            { num: t('stats.4.num'), label: t('stats.4.label') }].
+            map((stat) =>
+            <div key={stat.label}>
                 <p className="text-3xl md:text-[32px] font-serif text-navy mb-1">{stat.num}</p>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -106,16 +106,16 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Route, title: t('promise.simplicity.title'), desc: t('promise.simplicity.desc') },
-              { icon: ShieldCheck, title: t('promise.trust.title'), desc: t('promise.trust.desc') },
-              { icon: TrendingUp, title: t('promise.dignity.title'), desc: t('promise.dignity.desc') },
-            ].map((card, i) => (
-              <div key={card.title} className="card-masar text-center animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+            { icon: Route, title: t('promise.simplicity.title'), desc: t('promise.simplicity.desc') },
+            { icon: ShieldCheck, title: t('promise.trust.title'), desc: t('promise.trust.desc') },
+            { icon: TrendingUp, title: t('promise.dignity.title'), desc: t('promise.dignity.desc') }].
+            map((card, i) =>
+            <div key={card.title} className="card-masar text-center animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
                 <card.icon className="w-6 h-6 text-primary mx-auto mb-5" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-navy mb-3">{card.title}</h3>
                 <p className="text-muted-foreground">{card.desc}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -142,7 +142,7 @@ export default function Home() {
               <h3 className="text-2xl font-serif text-navy mb-4">{t('home.paths.individuals.title')}</h3>
               <p className="text-muted-foreground mb-6">{t('home.paths.individuals.body')}</p>
               <Link to="/how-it-works" className="text-primary font-medium hover:underline inline-flex items-center gap-1">
-                {t('home.paths.individuals.link')} <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+                {t('home.paths.individuals.link')} 
               </Link>
             </div>
             <div className="card-masar p-10 animate-fade-up delay-100 border border-border/50">
@@ -164,15 +164,15 @@ export default function Home() {
           <p className="text-gray-400 max-w-2xl mx-auto mb-12 animate-fade-up delay-100">{t('home.trust.body')}</p>
           <div className="flex flex-col sm:flex-row justify-center gap-12 mb-8 animate-fade-up delay-200">
             {[
-              { icon: ShieldCheck, label: t('home.trust.1') },
-              { icon: ShieldCheck, label: t('home.trust.2') },
-              { icon: ShieldCheck, label: t('home.trust.3') },
-            ].map((item) => (
-              <div key={item.label} className="flex flex-col items-center gap-3">
+            { icon: ShieldCheck, label: t('home.trust.1') },
+            { icon: ShieldCheck, label: t('home.trust.2') },
+            { icon: ShieldCheck, label: t('home.trust.3') }].
+            map((item) =>
+            <div key={item.label} className="flex flex-col items-center gap-3">
                 <item.icon className="w-6 h-6 text-white" strokeWidth={1.5} />
                 <span className="text-sm text-gray-300">{item.label}</span>
               </div>
-            ))}
+            )}
           </div>
           <Link to="/funds" className="text-teal-light text-sm font-medium hover:underline inline-flex items-center gap-1">
             {t('home.trust.link')} <ArrowRight className="w-4 h-4 rtl:rotate-180" />
@@ -186,16 +186,16 @@ export default function Home() {
           <h2 className="text-3xl md:text-[40px] font-serif text-center mb-12 animate-fade-up">{t('whyNow.title')}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Cpu, title: t('whyNow.rails.title'), desc: t('whyNow.rails.desc') },
-              { icon: Building2, title: t('whyNow.demand.title'), desc: t('whyNow.demand.desc') },
-              { icon: Users, title: t('whyNow.youth.title'), desc: t('whyNow.youth.desc') },
-            ].map((col, i) => (
-              <div key={col.title} className="animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+            { icon: Cpu, title: t('whyNow.rails.title'), desc: t('whyNow.rails.desc') },
+            { icon: Building2, title: t('whyNow.demand.title'), desc: t('whyNow.demand.desc') },
+            { icon: Users, title: t('whyNow.youth.title'), desc: t('whyNow.youth.desc') }].
+            map((col, i) =>
+            <div key={col.title} className="animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
                 <col.icon className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
                 <h3 className="text-lg font-semibold text-navy mb-2">{col.title}</h3>
                 <p className="text-muted-foreground">{col.desc}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -220,8 +220,8 @@ export default function Home() {
           <p className="text-xs text-muted-foreground">{t('disclaimer.short')}</p>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>);
+
 }
 
 function FlowDiagram() {
@@ -283,6 +283,6 @@ function FlowDiagram() {
           </marker>
         </defs>
       </svg>
-    </div>
-  );
+    </div>);
+
 }
