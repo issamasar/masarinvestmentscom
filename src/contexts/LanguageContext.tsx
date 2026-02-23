@@ -88,7 +88,7 @@ const translations: Record<Language, Record<string, string>> = {
     'finalCta.headline': 'Your future shouldn\'t depend on your financial background.',
 
     // How It Works
-    'hiw.hero.headline': 'From Paycheck to Ownership',
+    'hiw.hero.headline': 'Transforming Hard Work into Ownership',
     'hiw.hero.body': 'MASAR converts your salary contributions, employer matching, and everyday spending round-ups into real, JSC-authorized investment fund units — all running quietly in the background.',
     'hiw.channels.title': 'Three ways your money flows in.',
     'hiw.channels.payroll.title': 'Payroll Split',
