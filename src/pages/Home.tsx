@@ -33,7 +33,7 @@ function HeroIllustration() {
       <path d="M300 200 Q350 190 380 140 Q400 110 430 90" stroke="#16a085" strokeWidth="1" fill="none" opacity="0.3" />
 
       {/* Label */}
-      <text x="340" y="40" fill="#1a1a2e" fontSize="14" fontFamily="DM Sans, sans-serif" fontWeight="500">Your Fund Units</text>
+      <text x="340" y="40" fill="#1a1a2e" fontSize="14" fontFamily="DM Sans, sans-serif" fontWeight="500">Your Wealth</text>
     </svg>);
 
 }
