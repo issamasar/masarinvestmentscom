@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
-import { Wallet, Coins, Handshake, ShieldCheck, FileCheck, Lock, Calculator, Eye, ArrowRight } from 'lucide-react';
+import { Wallet, Coins, Handshake, ShieldCheck, FileCheck, Lock, Calculator, Eye } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -103,7 +103,7 @@ export default function HowItWorks() {
                 <span className={`inline-block text-xs font-medium px-2.5 py-1 rounded-full mb-4 ${fund.riskClass}`}>{fund.risk}</span>
                 <p className="text-sm text-muted-foreground mb-4">{fund.desc}</p>
                 <Link to="/funds" className="text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
-                  {t('hiw.sleeves.details')} <ArrowRight className="w-3 h-3 rtl:rotate-180" />
+                  {t('hiw.sleeves.details')} 
                 </Link>
               </div>
             )}
