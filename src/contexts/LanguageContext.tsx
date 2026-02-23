@@ -106,7 +106,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.steps.3.title': 'Invest',
     'hiw.steps.3.desc': 'Your contributions are pooled into the MASAR Umbrella Fund registered with the Securities Commission, then to the sleeve of your choosing. Every unit is recorded at the Securities Depository Center on a daily basis.',
     'hiw.steps.4.title': 'Track and Grow',
-    'hiw.steps.4.desc': 'See your units, their current value, your contribution streak, and distribution history — all in plain Arabic and English. Distributions are automatically reinvested unless you opt for cash. Your money compounds while you focus on your life.',
+    'hiw.steps.4.desc': 'See your units, their current value, your contribution streak, and distribution history, all in plain Language. Automatically reinvest or opt for cash. Your money compounds while you focus on your life.',
 
     'hiw.sleeves.title': 'Three sleeves. Your choice.',
     'hiw.sleeves.details': 'See full details →',
