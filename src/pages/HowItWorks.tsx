@@ -42,7 +42,7 @@ export default function HowItWorks() {
       <section className="section-padding bg-white">
         <div className="container-content max-w-3xl animate-fade-up">
           <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-serif leading-[1.1] mb-6 text-justify">{t('hiw.hero.headline')}</h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">{t('hiw.hero.body')}</p>
+          <p className="text-lg text-muted-foreground leading-relaxed text-justify">{t('hiw.hero.body')}</p>
         </div>
       </section>
 
