@@ -32,7 +32,14 @@ const translations: Record<Language, Record<string, string>> = {
     'home.hero.brand': 'MASAR',
     'home.hero.headline': 'Your hard work, building your future while you sleep.',
     'home.hero.body': 'MASAR turns small, recurring cashflows from your paycheck and daily spending into real, regulated investment assets. No expertise required. No complexity. Just consistent, compounding progress.',
+    'home.hero.descriptor': 'A regulation-native micro-investment platform converting recurring payroll and spending flows into registered fund ownership.',
     'home.hero.trustline': 'Regulator-first · Partner-led rails · Transparent ownership',
+
+    // Hero illustration
+    'hero.illust.salary': 'Salary',
+    'hero.illust.roundups': 'Round-ups',
+    'hero.illust.employer': 'Employer Match',
+    'hero.illust.fundUnits': 'Your Fund Units',
 
     // Home — Stats
     'stats.1.num': '1.3M',
@@ -53,9 +60,19 @@ const translations: Record<Language, Record<string, string>> = {
     'promise.dignity.title': 'Dignity',
     'promise.dignity.desc': 'Designed for people who work hard and deserve access to wealth-building tools.',
 
-    // Home — Engine
+    // Home — Engine (Flow diagram labels)
     'home.engine.headline': 'Your money works while you live your life.',
     'home.engine.body': 'Every paycheck, every purchase, every employer contribution — flowing into a regulated fund that compounds over time.',
+    'flow.payroll': 'Payroll Split',
+    'flow.roundups': 'Round-ups',
+    'flow.employer': 'Employer Match',
+    'flow.platform': 'MASAR Platform',
+    'flow.fund': 'Umbrella Fund',
+    'flow.registry': 'SDC',
+    'flow.registryLabel': 'Registry',
+    'flow.cashyield': 'CashYield',
+    'flow.balanced': 'Balanced',
+    'flow.halal': 'Halal',
 
     // Home — Two Paths
     'home.paths.individuals.label': 'For Individuals',
@@ -105,6 +122,14 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.steps.2.desc': 'Your contributions are pooled into the MASAR Umbrella Fund registered with the Securities Commission, then to the sleeve of your choosing. Every unit is recorded at the Securities Depository Center on a daily basis.',
     'hiw.steps.3.title': 'Track and Grow',
     'hiw.steps.3.desc': 'See your units, their current value, your contribution streak, and distribution history, all in plain Language. Automatically reinvest or opt for cash. Your money compounds while you focus on your life.',
+
+    // HoW flow diagram
+    'hiw.flow.salary': 'Salary',
+    'hiw.flow.roundups': 'Round-Ups',
+    'hiw.flow.employer': 'Employer',
+    'hiw.flow.wealth': 'Your Wealth',
+    'hiw.flow.sdc': 'SDC Registered',
+    'hiw.flow.12months': '12 months ✓',
 
     'hiw.sleeves.title': 'Three sleeves. Your choice.',
     'hiw.sleeves.details': 'See full details →',
@@ -174,6 +199,12 @@ const translations: Record<Language, Record<string, string>> = {
     'emp.dashboard.f2.desc': 'Monitor vesting progress, balances, and onboarding status.',
     'emp.dashboard.f3.title': 'Policy Controls',
     'emp.dashboard.f3.desc': 'Set matching rules, contribution limits, and vesting schedules.',
+
+    // Dashboard mockup labels
+    'emp.mock.enrollment': 'Enrollment Rate',
+    'emp.mock.aum': 'Total AUM',
+    'emp.mock.trends': 'Contribution Trends',
+    'emp.mock.participation': 'Participation by Department',
 
     'emp.start.1.title': 'Sign',
     'emp.start.1.desc': 'Standard employer participation agreement. No fiduciary obligations.',
@@ -276,7 +307,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     'about.founder.name': 'Issa Dallal',
     'about.founder.role': 'Founder & CEO',
-    'about.founder.quote': 'MASAR is my attempt to strip away the complexity. We\'re not trying to turn everyone into traders. We\'re trying to make ownership accessible to people who work hard and deserve a fair shot at building wealth.',
+    'about.founder.quote': 'MASAR exists because a teacher in a remote city should be able to sleep at night knowing her savings are working for her. We\'re not building a trading platform. We\'re building the quiet infrastructure that turns hard work into real ownership.',
 
     'about.values.title': 'Our Values',
     'about.values.1.title': 'Accessibility',
@@ -369,7 +400,14 @@ const translations: Record<Language, Record<string, string>> = {
     'home.hero.brand': 'مسار',
     'home.hero.headline': 'جهدك وتعبك، يبني مستقبلك وأنت نائم.',
     'home.hero.body': 'مسار يحوّل التدفقات النقدية الصغيرة والمتكررة من راتبك ومصاريفك اليومية إلى أصول استثمارية حقيقية ومنظمة. لا حاجة لخبرة. لا تعقيد. فقط تقدم ثابت ومتراكم.',
+    'home.hero.descriptor': 'منصة استثمار متناهي الصغر أصيلة التنظيم تحوّل تدفقات الرواتب والإنفاق المتكررة إلى ملكية صناديق مسجلة.',
     'home.hero.trustline': 'الأولوية للتنظيم · قنوات الشركاء · ملكية شفافة',
+
+    // Hero illustration
+    'hero.illust.salary': 'الراتب',
+    'hero.illust.roundups': 'التقريب',
+    'hero.illust.employer': 'مطابقة صاحب العمل',
+    'hero.illust.fundUnits': 'وحداتك في الصندوق',
 
     // Home — Stats
     'stats.1.num': '١.٣ مليون',
@@ -390,9 +428,19 @@ const translations: Record<Language, Record<string, string>> = {
     'promise.dignity.title': 'الكرامة',
     'promise.dignity.desc': 'مصمم للأشخاص الذين يعملون بجد ويستحقون الوصول لأدوات بناء الثروة.',
 
-    // Home — Engine
+    // Home — Engine (Flow diagram labels)
     'home.engine.headline': 'أموالك تعمل بينما تعيش حياتك.',
     'home.engine.body': 'كل راتب، كل عملية شراء، كل مساهمة من صاحب العمل — تتدفق إلى صندوق منظم ينمو مع الوقت.',
+    'flow.payroll': 'تقسيم الراتب',
+    'flow.roundups': 'التقريب',
+    'flow.employer': 'مطابقة صاحب العمل',
+    'flow.platform': 'منصة مسار',
+    'flow.fund': 'الصندوق المظلي',
+    'flow.registry': 'مركز الإيداع',
+    'flow.registryLabel': 'التسجيل',
+    'flow.cashyield': 'عائد نقدي',
+    'flow.balanced': 'متوازن',
+    'flow.halal': 'حلال',
 
     // Home — Two Paths
     'home.paths.individuals.label': 'للأفراد',
@@ -442,6 +490,14 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.steps.2.desc': 'مساهماتك تُجمع في صندوق مسار المظلي — صندوق استثمار مشترك مفتوح مرخص من هيئة الأوراق المالية. تختار واحداً أو أكثر من ثلاثة أوعية. الوحدات تُشترى بصافي قيمة الأصول اليومية.',
     'hiw.steps.3.title': 'تتبع ونمو',
     'hiw.steps.3.desc': 'شاهد وحداتك، قيمتها الحالية، سلسلة مساهماتك، وتاريخ التوزيعات — بالعربية والإنجليزية البسيطة. التوزيعات تُعاد استثمارها تلقائياً ما لم تختر النقد.',
+
+    // HoW flow diagram
+    'hiw.flow.salary': 'الراتب',
+    'hiw.flow.roundups': 'التقريب',
+    'hiw.flow.employer': 'صاحب العمل',
+    'hiw.flow.wealth': 'ثروتك',
+    'hiw.flow.sdc': 'مسجل في مركز الإيداع',
+    'hiw.flow.12months': '١٢ شهر ✓',
 
     'hiw.sleeves.title': 'ثلاثة أوعية. اختيارك.',
     'hiw.sleeves.details': 'شاهد التفاصيل الكاملة ←',
@@ -511,6 +567,12 @@ const translations: Record<Language, Record<string, string>> = {
     'emp.dashboard.f2.desc': 'راقب تقدم الاستحقاق والأرصدة وحالة التسجيل.',
     'emp.dashboard.f3.title': 'ضوابط السياسات',
     'emp.dashboard.f3.desc': 'حدد قواعد المطابقة وحدود المساهمة وجداول الاستحقاق.',
+
+    // Dashboard mockup labels
+    'emp.mock.enrollment': 'نسبة الاشتراك',
+    'emp.mock.aum': 'إجمالي الأصول المدارة',
+    'emp.mock.trends': 'اتجاهات المساهمات',
+    'emp.mock.participation': 'المشاركة حسب القسم',
 
     'emp.start.1.title': 'وقّع',
     'emp.start.1.desc': 'اتفاقية مشاركة صاحب العمل القياسية. بدون التزامات ائتمانية.',
@@ -613,7 +675,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     'about.founder.name': 'عيسى دلال',
     'about.founder.role': 'المؤسس والرئيس التنفيذي',
-    'about.founder.quote': 'مسار هو محاولتي لإزالة التعقيد. لا نحاول تحويل الجميع إلى متداولين. نحاول جعل الملكية في متناول الأشخاص الذين يعملون بجد ويستحقون فرصة عادلة لبناء الثروة.',
+    'about.founder.quote': 'مسار موجود لأن معلّمة في مدينة بعيدة يجب أن تنام مرتاحة وهي تعرف أن مدخراتها تعمل لصالحها. نحن لا نبني منصة تداول. نحن نبني البنية التحتية الهادئة التي تحوّل العمل الجاد إلى ملكية حقيقية.',
 
     'about.values.title': 'قيمنا',
     'about.values.1.title': 'سهولة الوصول',
