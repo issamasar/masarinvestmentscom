@@ -64,7 +64,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.paths.individuals.link': 'See how it works →',
     'home.paths.employers.label': 'For Employers',
     'home.paths.employers.title': 'A benefit your team will actually use.',
-    'home.paths.employers.body': 'Turn-key financial wellness with zero fiduciary risk. No custody, no advice obligations, no payroll rebuild. Measurable retention and engagement impact.',
+    'home.paths.employers.body': 'Turn-key employee financial wellness with zero fiduciary risk. Retain & Incentivise your team with a real-life benefit, fit for the real world.',
     'home.paths.employers.link': 'Learn more →',
 
     // Home — Trust
