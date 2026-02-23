@@ -100,7 +100,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.channels.note': 'All three channels flow into the same regulated fund. You choose how much comes from each.',
 
     'hiw.steps.1.title': 'Sign Up',
-    'hiw.steps.1.desc': 'Verify your identity digitally through SANAD — Jordan\'s national e-ID with 2M+ users. KYC and AML compliance are built in. The process takes minutes, not days, and is fully digital.',
+    'hiw.steps.1.desc': 'Verify your identity digitally through SANAD. KYC and AML compliance are built in. The process takes minutes, not days, and is fully digital.',
     'hiw.steps.2.title': 'Set Your Rules',
     'hiw.steps.2.desc': 'Choose your payroll split — a fixed dinar amount or a percentage. Optionally, activate round-ups on your bank card. If your employer offers matching, it activates automatically. You decide the rules once, and they run every cycle.',
     'hiw.steps.3.title': 'Your Money Enters the Fund',
