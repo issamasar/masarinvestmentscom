@@ -38,12 +38,12 @@ export default function About() {
       {/* Founder */}
       <section className="section-padding bg-white">
         <div className="container-narrow text-center animate-fade-up">
-          <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center mx-auto mb-6">
-            <span className="text-2xl font-serif text-navy">ID</span>
+          <div className="w-[120px] h-[120px] rounded-full bg-muted flex items-center justify-center mx-auto mb-6">
+            <span className="text-[32px] font-sans font-semibold text-navy">ID</span>
           </div>
-          <p className="text-lg font-semibold text-navy mb-1">{t('about.founder.name')}</p>
-          <p className="text-sm text-muted-foreground mb-8">{t('about.founder.role')}</p>
-          <blockquote className="text-xl font-serif italic text-navy leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl font-semibold text-navy mb-1">{t('about.founder.name')}</p>
+          <p className="text-base text-gray-500 mb-8">{t('about.founder.role')}</p>
+          <blockquote className="text-xl font-serif italic text-gray-700 leading-relaxed max-w-[640px] mx-auto">
             "{t('about.founder.quote')}"
           </blockquote>
         </div>
