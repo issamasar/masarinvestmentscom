@@ -22,8 +22,7 @@ export default function HowItWorks() {
   const steps = [
   { num: '01', title: t('hiw.steps.1.title'), desc: t('hiw.steps.1.desc'), side: 'right' as const },
   { num: '02', title: t('hiw.steps.2.title'), desc: t('hiw.steps.2.desc'), side: 'left' as const },
-  { num: '03', title: t('hiw.steps.3.title'), desc: t('hiw.steps.3.desc'), side: 'right' as const },
-  { num: '04', title: t('hiw.steps.4.title'), desc: t('hiw.steps.4.desc'), side: 'left' as const }];
+  { num: '03', title: t('hiw.steps.3.title'), desc: t('hiw.steps.3.desc'), side: 'right' as const }];
 
 
   const faqs = [
