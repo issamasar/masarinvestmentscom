@@ -40,9 +40,49 @@ export default function HowItWorks() {
     <Layout>
       {/* Hero */}
       <section className="section-padding bg-white">
-        <div className="container-content max-w-3xl animate-fade-up text-4xl">
+        <div className="container-content max-w-3xl animate-fade-up">
           <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-serif leading-[1.1] mb-6 text-justify">{t('hiw.hero.headline')}</h1>
-          <p className="text-lg text-muted-foreground leading-relaxed text-justify">{t('hiw.hero.body')}</p>
+          <p className="text-lg text-muted-foreground leading-relaxed text-justify mb-12">{t('hiw.hero.body')}</p>
+          
+          {/* Flow Diagram */}
+          <div className="flex justify-center">
+            <svg viewBox="0 0 480 160" fill="none" className="w-full max-w-md h-auto">
+              {/* Three source nodes */}
+              <rect x="0" y="10" width="100" height="36" rx="18" fill="hsl(160 41% 94%)" stroke="hsl(168 73% 36%)" strokeWidth="1.2" />
+              <text x="50" y="33" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="11" fontFamily="DM Sans, sans-serif" fontWeight="500">Salary</text>
+              
+              <rect x="0" y="62" width="100" height="36" rx="18" fill="hsl(160 41% 94%)" stroke="hsl(168 73% 36%)" strokeWidth="1.2" />
+              <text x="50" y="85" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="11" fontFamily="DM Sans, sans-serif" fontWeight="500">Round-Ups</text>
+              
+              <rect x="0" y="114" width="100" height="36" rx="18" fill="hsl(41 61% 55% / 0.15)" stroke="hsl(41 61% 55%)" strokeWidth="1.2" />
+              <text x="50" y="137" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="11" fontFamily="DM Sans, sans-serif" fontWeight="500">Employer</text>
+              
+              {/* Converging lines */}
+              <path d="M100 28 Q160 28 200 80" stroke="hsl(168 73% 36%)" strokeWidth="1.5" strokeDasharray="5 4" fill="none" />
+              <path d="M100 80 L200 80" stroke="hsl(168 73% 36%)" strokeWidth="1.5" strokeDasharray="5 4" fill="none" />
+              <path d="M100 132 Q160 132 200 80" stroke="hsl(41 61% 55%)" strokeWidth="1.5" strokeDasharray="5 4" fill="none" />
+              
+              {/* Central merge point */}
+              <circle cx="210" cy="80" r="6" fill="hsl(168 73% 36%)" />
+              
+              {/* Arrow to fund */}
+              <path d="M216 80 L290 80" stroke="hsl(168 73% 36%)" strokeWidth="1.5" />
+              <polygon points="288,75 298,80 288,85" fill="hsl(168 73% 36%)" />
+              
+              {/* Fund box */}
+              <rect x="300" y="54" width="110" height="52" rx="10" fill="white" stroke="hsl(220 13% 91%)" strokeWidth="1.5" />
+              <text x="355" y="76" textAnchor="middle" fill="hsl(168 73% 36%)" fontSize="10" fontFamily="DM Sans, sans-serif" fontWeight="600">MASAR Fund</text>
+              <text x="355" y="94" textAnchor="middle" fill="hsl(220 9% 46%)" fontSize="9" fontFamily="DM Sans, sans-serif">SDC Registered</text>
+              
+              {/* Arrow to wealth */}
+              <path d="M410 80 L440 80" stroke="hsl(168 73% 36%)" strokeWidth="1.5" />
+              <polygon points="438,75 448,80 438,85" fill="hsl(168 73% 36%)" />
+              
+              {/* Wealth label */}
+              <text x="460" y="76" fill="hsl(240 33% 14%)" fontSize="12" fontFamily="Instrument Serif, Georgia, serif" fontStyle="italic">Your</text>
+              <text x="460" y="92" fill="hsl(240 33% 14%)" fontSize="12" fontFamily="Instrument Serif, Georgia, serif" fontStyle="italic">Wealth</text>
+            </svg>
+          </div>
         </div>
       </section>
 
