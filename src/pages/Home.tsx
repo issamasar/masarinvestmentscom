@@ -175,7 +175,7 @@ export default function Home() {
             )}
           </div>
           <Link to="/funds" className="text-teal-light text-sm font-medium hover:underline inline-flex items-center gap-1">
-            {t('home.trust.link')} <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+            {t('home.trust.link')} 
           </Link>
         </div>
       </section>
