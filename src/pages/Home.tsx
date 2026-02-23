@@ -150,7 +150,7 @@ export default function Home() {
               <h3 className="text-2xl font-serif text-navy mb-4">{t('home.paths.employers.title')}</h3>
               <p className="text-muted-foreground mb-6">{t('home.paths.employers.body')}</p>
               <Link to="/employers" className="text-primary font-medium hover:underline inline-flex items-center gap-1">
-                {t('home.paths.employers.link')} <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+                {t('home.paths.employers.link')} 
               </Link>
             </div>
           </div>
