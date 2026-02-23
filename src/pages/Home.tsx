@@ -33,7 +33,7 @@ function HeroIllustration() {
       <path d="M300 200 Q350 190 380 140 Q400 110 430 90" stroke="#16a085" strokeWidth="1" fill="none" opacity="0.3" />
 
       {/* Label */}
-      <text x="340" y="40" fill="#1a1a2e" fontSize="14" fontFamily="DM Sans, sans-serif" fontWeight="500">Your Wealth</text>
+      <text x="340" y="40" fill="#1a1a2e" fontSize="14" fontFamily="DM Sans, sans-serif" fontWeight="500">Your Fund Units</text>
     </svg>);
 
 }
@@ -181,24 +181,24 @@ export default function Home() {
       </section>
 
       {/* Section 7 — Why Now */}
-      <section className="section-padding bg-white">
-        <div className="container-content">
-          <h2 className="text-3xl md:text-[40px] font-serif text-center mb-12 animate-fade-up">{t('whyNow.title')}</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-            { icon: Cpu, title: t('whyNow.rails.title'), desc: t('whyNow.rails.desc') },
-            { icon: Building2, title: t('whyNow.demand.title'), desc: t('whyNow.demand.desc') },
-            { icon: Users, title: t('whyNow.youth.title'), desc: t('whyNow.youth.desc') }].
-            map((col, i) =>
-            <div key={col.title} className="animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
-                <col.icon className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                <h3 className="text-lg font-semibold text-navy mb-2">{col.title}</h3>
-                <p className="text-muted-foreground">{col.desc}</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Section 8 — Final CTA */}
       <section className="section-padding bg-cream">
