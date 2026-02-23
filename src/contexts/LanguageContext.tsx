@@ -96,7 +96,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.channels.roundups.title': 'Round-Ups',
     'hiw.channels.roundups.desc': 'Link your bank card. Every purchase rounds up to the nearest dinar. Your JOD 3.40 coffee becomes a 60-piaster investment. Your daily spending quietly builds your portfolio.',
     'hiw.channels.match.title': 'Employer Match',
-    'hiw.channels.match.desc': 'If your employer participates in MASAR, they contribute alongside you. It\'s like a raise that goes straight to your future — and it compounds.',
+    'hiw.channels.match.desc': 'If your employer participates in MASAR, they contribute alongside you. It\'s like a raise that goes straight to your future self, and it compounds while you sleep.',
     'hiw.channels.note': 'All three channels flow into the same regulated fund. You choose how much comes from each.',
 
     'hiw.steps.1.title': 'Sign Up',
