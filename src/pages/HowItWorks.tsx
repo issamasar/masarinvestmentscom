@@ -22,7 +22,8 @@ export default function HowItWorks() {
   const steps = [
   { num: '01', title: t('hiw.steps.1.title'), desc: t('hiw.steps.1.desc'), side: 'right' as const },
   { num: '02', title: t('hiw.steps.2.title'), desc: t('hiw.steps.2.desc'), side: 'left' as const },
-  { num: '03', title: t('hiw.steps.3.title'), desc: t('hiw.steps.3.desc'), side: 'right' as const }];
+  { num: '03', title: t('hiw.steps.3.title'), desc: t('hiw.steps.3.desc'), side: 'right' as const },
+  { num: '04', title: t('hiw.steps.4.title'), desc: t('hiw.steps.4.desc'), side: 'left' as const }];
 
 
   const faqs = [
@@ -39,14 +40,31 @@ export default function HowItWorks() {
     <Layout>
       {/* Hero */}
       <section className="section-padding bg-white">
-        <div className="container-content max-w-3xl animate-fade-up">
+        <div className="container-content max-w-3xl animate-fade-up text-4xl">
           <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-serif leading-[1.1] mb-6 text-justify">{t('hiw.hero.headline')}</h1>
           <p className="text-lg text-muted-foreground leading-relaxed text-justify">{t('hiw.hero.body')}</p>
         </div>
       </section>
 
-      {/* The Journey */}
+      {/* Three Channels */}
       <section className="section-padding bg-cream">
+        <div className="container-content">
+          <h2 className="text-3xl md:text-[40px] font-serif text-center mb-12 animate-fade-up">{t('hiw.channels.title')}</h2>
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {channels.map((ch, i) =>
+            <div key={ch.title} className="card-masar text-center animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+                <ch.icon className="w-6 h-6 text-primary mx-auto mb-5" strokeWidth={1.5} />
+                <h3 className="text-lg font-semibold text-navy mb-3">{ch.title}</h3>
+                <p className="text-muted-foreground text-sm">{ch.desc}</p>
+              </div>
+            )}
+          </div>
+          <p className="text-center text-sm text-muted-foreground italic animate-fade-up">{t('hiw.channels.note')}</p>
+        </div>
+      </section>
+
+      {/* The Journey */}
+      <section className="section-padding bg-white">
         <div className="container-content max-w-4xl">
           {steps.map((step, i) =>
           <div
@@ -66,23 +84,6 @@ export default function HowItWorks() {
               </div>
             </div>
           )}
-        </div>
-      </section>
-
-      {/* Three Channels */}
-      <section className="section-padding bg-white">
-        <div className="container-content">
-          <h2 className="text-3xl md:text-[40px] font-serif text-center mb-12 animate-fade-up">{t('hiw.channels.title')}</h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {channels.map((ch, i) =>
-            <div key={ch.title} className="card-masar text-center animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
-                <ch.icon className="w-6 h-6 text-primary mx-auto mb-5" strokeWidth={1.5} />
-                <h3 className="text-lg font-semibold text-navy mb-3">{ch.title}</h3>
-                <p className="text-muted-foreground text-sm">{ch.desc}</p>
-              </div>
-            )}
-          </div>
-          <p className="text-center text-sm text-muted-foreground italic animate-fade-up">{t('hiw.channels.note')}</p>
         </div>
       </section>
 
