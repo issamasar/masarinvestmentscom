@@ -89,7 +89,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // How It Works
     'hiw.hero.headline': 'Your Hard Work & Daily Spend, Transformed into Real Ownership',
-    'hiw.hero.body': 'MASAR converts your salary contributions, employer matching, and everyday spending round-ups into real, JSC-authorized investment fund units — all running quietly in the background.',
+    'hiw.hero.body': 'MASAR converts your salary contributions, employer matching, and everyday spending round-ups into a wealth engine tailored to your needs, growing while you live your life, seamlessly building your future for you.',
     'hiw.channels.title': 'Three ways your money flows in.',
     'hiw.channels.payroll.title': 'Payroll Split',
     'hiw.channels.payroll.desc': 'Choose a fixed amount or percentage of your salary. It flows automatically every pay cycle. Set it once and it runs every month — no decisions, no friction.',
