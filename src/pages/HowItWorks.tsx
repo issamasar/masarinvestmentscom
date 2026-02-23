@@ -46,25 +46,8 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* Three Channels */}
-      <section className="section-padding bg-cream">
-        <div className="container-content">
-          <h2 className="text-3xl md:text-[40px] font-serif text-center mb-12 animate-fade-up">{t('hiw.channels.title')}</h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {channels.map((ch, i) =>
-            <div key={ch.title} className="card-masar text-center animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
-                <ch.icon className="w-6 h-6 text-primary mx-auto mb-5" strokeWidth={1.5} />
-                <h3 className="text-lg font-semibold text-navy mb-3">{ch.title}</h3>
-                <p className="text-muted-foreground text-sm">{ch.desc}</p>
-              </div>
-            )}
-          </div>
-          <p className="text-center text-sm text-muted-foreground italic animate-fade-up">{t('hiw.channels.note')}</p>
-        </div>
-      </section>
-
       {/* The Journey */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-cream">
         <div className="container-content max-w-4xl">
           {steps.map((step, i) =>
           <div
@@ -84,6 +67,23 @@ export default function HowItWorks() {
               </div>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Three Channels */}
+      <section className="section-padding bg-white">
+        <div className="container-content">
+          <h2 className="text-3xl md:text-[40px] font-serif text-center mb-12 animate-fade-up">{t('hiw.channels.title')}</h2>
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {channels.map((ch, i) =>
+            <div key={ch.title} className="card-masar text-center animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+                <ch.icon className="w-6 h-6 text-primary mx-auto mb-5" strokeWidth={1.5} />
+                <h3 className="text-lg font-semibold text-navy mb-3">{ch.title}</h3>
+                <p className="text-muted-foreground text-sm">{ch.desc}</p>
+              </div>
+            )}
+          </div>
+          <p className="text-center text-sm text-muted-foreground italic animate-fade-up">{t('hiw.channels.note')}</p>
         </div>
       </section>
 
