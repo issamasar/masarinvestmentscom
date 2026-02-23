@@ -68,7 +68,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.paths.employers.link': 'Learn more →',
 
     // Home — Trust
-    'home.trust.headline': 'An orchestration layer, not a custodian.',
+    'home.trust.headline': 'An orchestration layer with the safety of Bank Custodians.',
     'home.trust.body': 'MASAR coordinates the flow. Independent institutions hold, record, and oversee.',
     'home.trust.1': 'JSC-Authorized Fund',
     'home.trust.2': 'SDC-Recorded Units',
