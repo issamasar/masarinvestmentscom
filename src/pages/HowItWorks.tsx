@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
 import { Wallet, Coins, Handshake, ShieldCheck, FileCheck, Lock, Calculator, Eye } from 'lucide-react';
+import { useInView } from '@/hooks/use-in-view';
 import {
   Accordion,
   AccordionContent,
@@ -127,7 +128,7 @@ export default function HowItWorks() {
                 <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
               </div>
               <div className="flex-1 flex justify-center">
-                <StepIllustration step={parseInt(step.num)} />
+                <AnimatedStepIllustration step={parseInt(step.num)} />
               </div>
             </div>
           )}
@@ -214,6 +215,23 @@ export default function HowItWorks() {
       </section>
     </Layout>);
 
+}
+
+function AnimatedStepIllustration({ step }: { step: number }) {
+  const { ref, inView } = useInView({ threshold: 0.3 });
+
+  return (
+    <div
+      ref={ref}
+      className="transition-all duration-700 ease-out"
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0) scale(1)' : 'translateY(24px) scale(0.95)',
+      }}
+    >
+      <StepIllustration step={step} />
+    </div>
+  );
 }
 
 function StepIllustration({ step }: {step: number;}) {
