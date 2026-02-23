@@ -80,23 +80,23 @@ export default function Home() {
       </section>
 
       {/* Section 2 — Market Stats */}
-      <section className="py-12 md:py-16 bg-cream">
-        <div className="container-content">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-            { num: t('stats.1.num'), label: t('stats.1.label') },
-            { num: t('stats.2.num'), label: t('stats.2.label') },
-            { num: t('stats.3.num'), label: t('stats.3.label') },
-            { num: t('stats.4.num'), label: t('stats.4.label') }].
-            map((stat) =>
-            <div key={stat.label}>
-                <p className="text-3xl md:text-[32px] font-serif text-navy mb-1">{stat.num}</p>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Section 3 — The MASAR Promise */}
       <section className="section-padding bg-white">
