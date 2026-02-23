@@ -22,8 +22,7 @@ export default function HowItWorks() {
   const steps = [
   { num: '01', title: t('hiw.steps.1.title'), desc: t('hiw.steps.1.desc'), side: 'right' as const },
   { num: '02', title: t('hiw.steps.2.title'), desc: t('hiw.steps.2.desc'), side: 'left' as const },
-  { num: '03', title: t('hiw.steps.3.title'), desc: t('hiw.steps.3.desc'), side: 'right' as const },
-  { num: '04', title: t('hiw.steps.4.title'), desc: t('hiw.steps.4.desc'), side: 'left' as const }];
+  { num: '03', title: t('hiw.steps.3.title'), desc: t('hiw.steps.3.desc'), side: 'right' as const }];
 
 
   const faqs = [
@@ -44,43 +43,51 @@ export default function HowItWorks() {
           <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-serif leading-[1.1] mb-6 text-justify">{t('hiw.hero.headline')}</h1>
           <p className="text-lg text-muted-foreground leading-relaxed text-justify mb-12">{t('hiw.hero.body')}</p>
           
-          {/* Flow Diagram */}
+          {/* Animated Flow Diagram */}
           <div className="flex justify-center">
-            <svg viewBox="0 0 480 160" fill="none" className="w-full max-w-md h-auto">
-              {/* Three source nodes */}
-              <rect x="0" y="10" width="100" height="36" rx="18" fill="hsl(160 41% 94%)" stroke="hsl(168 73% 36%)" strokeWidth="1.2" />
-              <text x="50" y="33" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="11" fontFamily="DM Sans, sans-serif" fontWeight="500">Salary</text>
-              
-              <rect x="0" y="62" width="100" height="36" rx="18" fill="hsl(160 41% 94%)" stroke="hsl(168 73% 36%)" strokeWidth="1.2" />
-              <text x="50" y="85" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="11" fontFamily="DM Sans, sans-serif" fontWeight="500">Round-Ups</text>
-              
-              <rect x="0" y="114" width="100" height="36" rx="18" fill="hsl(41 61% 55% / 0.15)" stroke="hsl(41 61% 55%)" strokeWidth="1.2" />
-              <text x="50" y="137" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="11" fontFamily="DM Sans, sans-serif" fontWeight="500">Employer</text>
-              
+            <svg viewBox="0 0 400 120" fill="none" className="w-full max-w-sm h-auto">
+              <style>{`
+                @keyframes drawLine { from { stroke-dashoffset: 200; } to { stroke-dashoffset: 0; } }
+                @keyframes nodeIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+                @keyframes dotPulse { 0%, 100% { r: 5; } 50% { r: 7; } }
+                .flow-node { animation: nodeIn 0.5s ease-out forwards; opacity: 0; }
+                .flow-line { stroke-dasharray: 200; animation: drawLine 1s ease-out forwards; }
+                .flow-dot { animation: dotPulse 2s ease-in-out infinite; }
+                .n1 { animation-delay: 0.2s; } .n2 { animation-delay: 0.4s; } .n3 { animation-delay: 0.6s; }
+                .l1 { animation-delay: 0.6s; } .l2 { animation-delay: 0.8s; } .l3 { animation-delay: 1s; }
+                .n4 { animation-delay: 1.2s; } .n5 { animation-delay: 1.5s; }
+              `}</style>
+
+              {/* Source pills */}
+              <g className="flow-node n1" style={{ transformOrigin: '50px 20px' }}>
+                <rect x="0" y="4" width="90" height="32" rx="16" fill="hsl(160 41% 94%)" stroke="hsl(168 73% 36%)" strokeWidth="1" />
+                <text x="45" y="25" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="10" fontFamily="DM Sans, sans-serif" fontWeight="500">Salary</text>
+              </g>
+              <g className="flow-node n2" style={{ transformOrigin: '50px 60px' }}>
+                <rect x="0" y="44" width="90" height="32" rx="16" fill="hsl(160 41% 94%)" stroke="hsl(168 73% 36%)" strokeWidth="1" />
+                <text x="45" y="65" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="10" fontFamily="DM Sans, sans-serif" fontWeight="500">Round-Ups</text>
+              </g>
+              <g className="flow-node n3" style={{ transformOrigin: '50px 100px' }}>
+                <rect x="0" y="84" width="90" height="32" rx="16" fill="hsl(41 61% 55% / 0.12)" stroke="hsl(41 61% 55%)" strokeWidth="1" />
+                <text x="45" y="105" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="10" fontFamily="DM Sans, sans-serif" fontWeight="500">Employer</text>
+              </g>
+
               {/* Converging lines */}
-              <path d="M100 28 Q160 28 200 80" stroke="hsl(168 73% 36%)" strokeWidth="1.5" strokeDasharray="5 4" fill="none" />
-              <path d="M100 80 L200 80" stroke="hsl(168 73% 36%)" strokeWidth="1.5" strokeDasharray="5 4" fill="none" />
-              <path d="M100 132 Q160 132 200 80" stroke="hsl(41 61% 55%)" strokeWidth="1.5" strokeDasharray="5 4" fill="none" />
-              
-              {/* Central merge point */}
-              <circle cx="210" cy="80" r="6" fill="hsl(168 73% 36%)" />
-              
-              {/* Arrow to fund */}
-              <path d="M216 80 L290 80" stroke="hsl(168 73% 36%)" strokeWidth="1.5" />
-              <polygon points="288,75 298,80 288,85" fill="hsl(168 73% 36%)" />
-              
-              {/* Fund box */}
-              <rect x="300" y="54" width="110" height="52" rx="10" fill="white" stroke="hsl(220 13% 91%)" strokeWidth="1.5" />
-              <text x="355" y="76" textAnchor="middle" fill="hsl(168 73% 36%)" fontSize="10" fontFamily="DM Sans, sans-serif" fontWeight="600">MASAR Fund</text>
-              <text x="355" y="94" textAnchor="middle" fill="hsl(220 9% 46%)" fontSize="9" fontFamily="DM Sans, sans-serif">SDC Registered</text>
-              
-              {/* Arrow to wealth */}
-              <path d="M410 80 L440 80" stroke="hsl(168 73% 36%)" strokeWidth="1.5" />
-              <polygon points="438,75 448,80 438,85" fill="hsl(168 73% 36%)" />
-              
-              {/* Wealth label */}
-              <text x="460" y="76" fill="hsl(240 33% 14%)" fontSize="12" fontFamily="Instrument Serif, Georgia, serif" fontStyle="italic">Your</text>
-              <text x="460" y="92" fill="hsl(240 33% 14%)" fontSize="12" fontFamily="Instrument Serif, Georgia, serif" fontStyle="italic">Wealth</text>
+              <path className="flow-line l1" d="M90 20 Q140 20 170 60" stroke="hsl(168 73% 36%)" strokeWidth="1.2" fill="none" />
+              <path className="flow-line l2" d="M90 60 L170 60" stroke="hsl(168 73% 36%)" strokeWidth="1.2" fill="none" />
+              <path className="flow-line l3" d="M90 100 Q140 100 170 60" stroke="hsl(41 61% 55%)" strokeWidth="1.2" fill="none" />
+
+              {/* Merge dot */}
+              <circle className="flow-node n4 flow-dot" cx="178" cy="60" r="5" fill="hsl(168 73% 36%)" style={{ transformOrigin: '178px 60px' }} />
+
+              {/* Arrow + Wealth */}
+              <g className="flow-node n5" style={{ transformOrigin: '300px 60px' }}>
+                <path d="M186 60 L260 60" stroke="hsl(168 73% 36%)" strokeWidth="1.2" />
+                <polygon points="258,55 268,60 258,65" fill="hsl(168 73% 36%)" />
+                <rect x="275" y="38" width="110" height="44" rx="8" fill="white" stroke="hsl(220 13% 91%)" strokeWidth="1.2" />
+                <text x="330" y="57" textAnchor="middle" fill="hsl(168 73% 36%)" fontSize="11" fontFamily="DM Sans, sans-serif" fontWeight="600">Your Wealth</text>
+                <text x="330" y="72" textAnchor="middle" fill="hsl(220 9% 46%)" fontSize="8" fontFamily="DM Sans, sans-serif">SDC Registered</text>
+              </g>
             </svg>
           </div>
         </div>
@@ -213,15 +220,6 @@ function StepIllustration({ step }: {step: number;}) {
   const illustrations: Record<number, JSX.Element> = {
     1:
     <svg viewBox="0 0 200 160" fill="none" className="w-48 h-auto">
-        <rect x="40" y="30" width="120" height="80" rx="12" fill="white" stroke="#e5e7eb" strokeWidth="1.5" />
-        <rect x="60" y="50" width="80" height="12" rx="3" fill="#f3f4f6" />
-        <rect x="60" y="70" width="50" height="12" rx="3" fill="#f3f4f6" />
-        <circle cx="140" cy="90" r="12" fill="#e8f5f1" stroke="#16a085" strokeWidth="1.5" />
-        <path d="M135 90 L139 94 L146 86" stroke="#16a085" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>,
-
-    2:
-    <svg viewBox="0 0 200 160" fill="none" className="w-48 h-auto">
         <rect x="30" y="40" width="140" height="80" rx="12" fill="white" stroke="#e5e7eb" strokeWidth="1.5" />
         <rect x="50" y="60" width="100" height="8" rx="4" fill="#f3f4f6" />
         <rect x="50" y="60" width="40" height="8" rx="4" fill="#16a085" />
@@ -231,7 +229,7 @@ function StepIllustration({ step }: {step: number;}) {
         <circle cx="120" cy="89" r="6" fill="white" stroke="#d4a843" strokeWidth="1.5" />
       </svg>,
 
-    3:
+    2:
     <svg viewBox="0 0 200 160" fill="none" className="w-48 h-auto">
         <path d="M30 120 Q60 120 70 80" stroke="#16a085" strokeWidth="1.5" strokeDasharray="4 3" />
         <path d="M30 80 Q60 80 70 80" stroke="#d4a843" strokeWidth="1.5" strokeDasharray="4 3" />
@@ -244,7 +242,7 @@ function StepIllustration({ step }: {step: number;}) {
         <text x="165" y="87" textAnchor="middle" fill="#16a085" fontSize="8" fontFamily="DM Sans">SDC</text>
       </svg>,
 
-    4:
+    3:
     <svg viewBox="0 0 200 160" fill="none" className="w-48 h-auto">
         <rect x="30" y="30" width="140" height="100" rx="12" fill="white" stroke="#e5e7eb" strokeWidth="1.5" />
         <polyline points="50,100 70,85 90,90 110,60 130,55 150,45" fill="none" stroke="#16a085" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
