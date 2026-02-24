@@ -41,8 +41,8 @@ export default function HowItWorks() {
       {/* Hero */}
       <section className="section-padding bg-white">
         <div className="container-content max-w-3xl animate-fade-up">
-          <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-serif leading-[1.1] mb-6 text-justify">{t('hiw.hero.headline')}</h1>
-          <p className="text-lg text-muted-foreground leading-relaxed text-justify mb-12">{t('hiw.hero.body')}</p>
+          <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-serif leading-[1.1] mb-6">{t('hiw.hero.headline')}</h1>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-12">{t('hiw.hero.body')}</p>
 
           {/* Animated Flow Diagram */}
           <div className="flex justify-center">
@@ -175,7 +175,28 @@ export default function HowItWorks() {
 }
 
 function HoWFlowDiagram() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isRTL = language === 'ar';
+  const font = isRTL ? 'Noto Sans Arabic, DM Sans, sans-serif' : 'DM Sans, sans-serif';
+
+  // RTL-aware positions
+  const pillX = isRTL ? 310 : 0;
+  const pillCenterX = pillX + 45;
+  const mergeX = isRTL ? 222 : 178;
+  const wealthBoxX = isRTL ? 15 : 275;
+  const wealthCenterX = wealthBoxX + 55;
+
+  // Lines: from pill edge to merge
+  const pillEdge = isRTL ? pillX : pillX + 90;
+  const lineEndX = isRTL ? mergeX + 8 : mergeX - 8;
+
+  // Arrow from merge to wealth
+  const arrowStartX = isRTL ? mergeX - 8 : mergeX + 8;
+  const arrowEndX = isRTL ? wealthBoxX + 110 : wealthBoxX;
+  const arrowPointX = isRTL ? wealthBoxX + 118 : wealthBoxX - 8;
+  const arrowPoly = isRTL
+    ? `${arrowPointX + 10},55 ${arrowPointX},60 ${arrowPointX + 10},65`
+    : `${arrowPointX + 10},55 ${arrowPointX + 20},60 ${arrowPointX + 10},65`;
 
   return (
     <svg viewBox="0 0 400 120" fill="none" className="w-full max-w-sm h-auto">
@@ -192,34 +213,34 @@ function HoWFlowDiagram() {
       `}</style>
 
       {/* Source pills */}
-      <g className="flow-node n1" style={{ transformOrigin: '50px 20px' }}>
-        <rect x="0" y="4" width="90" height="32" rx="16" fill="hsl(160 41% 94%)" stroke="hsl(168 73% 36%)" strokeWidth="1" />
-        <text x="45" y="25" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="10" fontFamily="DM Sans, sans-serif" fontWeight="500">{t('hiw.flow.salary')}</text>
+      <g className="flow-node n1" style={{ transformOrigin: `${pillCenterX}px 20px` }}>
+        <rect x={pillX} y="4" width="90" height="32" rx="16" fill="hsl(160 41% 94%)" stroke="hsl(168 73% 36%)" strokeWidth="1" />
+        <text x={pillCenterX} y="25" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="10" fontFamily={font} fontWeight="500">{t('hiw.flow.salary')}</text>
       </g>
-      <g className="flow-node n2" style={{ transformOrigin: '50px 60px' }}>
-        <rect x="0" y="44" width="90" height="32" rx="16" fill="hsl(160 41% 94%)" stroke="hsl(168 73% 36%)" strokeWidth="1" />
-        <text x="45" y="65" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="10" fontFamily="DM Sans, sans-serif" fontWeight="500">{t('hiw.flow.roundups')}</text>
+      <g className="flow-node n2" style={{ transformOrigin: `${pillCenterX}px 60px` }}>
+        <rect x={pillX} y="44" width="90" height="32" rx="16" fill="hsl(160 41% 94%)" stroke="hsl(168 73% 36%)" strokeWidth="1" />
+        <text x={pillCenterX} y="65" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="10" fontFamily={font} fontWeight="500">{t('hiw.flow.roundups')}</text>
       </g>
-      <g className="flow-node n3" style={{ transformOrigin: '50px 100px' }}>
-        <rect x="0" y="84" width="90" height="32" rx="16" fill="hsl(41 61% 55% / 0.12)" stroke="hsl(41 61% 55%)" strokeWidth="1" />
-        <text x="45" y="105" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="10" fontFamily="DM Sans, sans-serif" fontWeight="500">{t('hiw.flow.employer')}</text>
+      <g className="flow-node n3" style={{ transformOrigin: `${pillCenterX}px 100px` }}>
+        <rect x={pillX} y="84" width="90" height="32" rx="16" fill="hsl(41 61% 55% / 0.12)" stroke="hsl(41 61% 55%)" strokeWidth="1" />
+        <text x={pillCenterX} y="105" textAnchor="middle" fill="hsl(240 33% 14%)" fontSize="10" fontFamily={font} fontWeight="500">{t('hiw.flow.employer')}</text>
       </g>
 
       {/* Converging lines */}
-      <path className="flow-line l1" d="M90 20 Q140 20 170 60" stroke="hsl(168 73% 36%)" strokeWidth="1.2" fill="none" />
-      <path className="flow-line l2" d="M90 60 L170 60" stroke="hsl(168 73% 36%)" strokeWidth="1.2" fill="none" />
-      <path className="flow-line l3" d="M90 100 Q140 100 170 60" stroke="hsl(41 61% 55%)" strokeWidth="1.2" fill="none" />
+      <path className="flow-line l1" d={`M${pillEdge} 20 Q${(pillEdge + lineEndX) / 2} 20 ${lineEndX} 60`} stroke="hsl(168 73% 36%)" strokeWidth="1.2" fill="none" />
+      <path className="flow-line l2" d={`M${pillEdge} 60 L${lineEndX} 60`} stroke="hsl(168 73% 36%)" strokeWidth="1.2" fill="none" />
+      <path className="flow-line l3" d={`M${pillEdge} 100 Q${(pillEdge + lineEndX) / 2} 100 ${lineEndX} 60`} stroke="hsl(41 61% 55%)" strokeWidth="1.2" fill="none" />
 
       {/* Merge dot */}
-      <circle className="flow-node n4 flow-dot" cx="178" cy="60" r="5" fill="hsl(168 73% 36%)" style={{ transformOrigin: '178px 60px' }} />
+      <circle className="flow-node n4 flow-dot" cx={mergeX} cy="60" r="5" fill="hsl(168 73% 36%)" style={{ transformOrigin: `${mergeX}px 60px` }} />
 
       {/* Arrow + Wealth */}
-      <g className="flow-node n5" style={{ transformOrigin: '300px 60px' }}>
-        <path d="M186 60 L260 60" stroke="hsl(168 73% 36%)" strokeWidth="1.2" />
-        <polygon points="258,55 268,60 258,65" fill="hsl(168 73% 36%)" />
-        <rect x="275" y="38" width="110" height="44" rx="8" fill="white" stroke="hsl(220 13% 91%)" strokeWidth="1.2" />
-        <text x="330" y="57" textAnchor="middle" fill="hsl(168 73% 36%)" fontSize="11" fontFamily="DM Sans, sans-serif" fontWeight="600">{t('hiw.flow.wealth')}</text>
-        <text x="330" y="72" textAnchor="middle" fill="hsl(220 9% 46%)" fontSize="8" fontFamily="DM Sans, sans-serif">{t('hiw.flow.sdc')}</text>
+      <g className="flow-node n5" style={{ transformOrigin: `${wealthCenterX}px 60px` }}>
+        <path d={`M${arrowStartX} 60 L${arrowEndX} 60`} stroke="hsl(168 73% 36%)" strokeWidth="1.2" />
+        <polygon points={arrowPoly} fill="hsl(168 73% 36%)" />
+        <rect x={wealthBoxX} y="38" width="110" height="44" rx="8" fill="white" stroke="hsl(220 13% 91%)" strokeWidth="1.2" />
+        <text x={wealthCenterX} y="57" textAnchor="middle" fill="hsl(168 73% 36%)" fontSize="11" fontFamily={font} fontWeight="600">{t('hiw.flow.wealth')}</text>
+        <text x={wealthCenterX} y="72" textAnchor="middle" fill="hsl(220 9% 46%)" fontSize="8" fontFamily={font}>{t('hiw.flow.sdc')}</text>
       </g>
     </svg>
   );
@@ -243,7 +264,8 @@ function AnimatedStepIllustration({ step }: { step: number }) {
 }
 
 function StepIllustration({ step }: { step: number }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const fontFamily = language === 'ar' ? 'Noto Sans Arabic, DM Sans, sans-serif' : 'DM Sans, sans-serif';
 
   const illustrations: Record<number, JSX.Element> = {
     1: (
@@ -267,14 +289,14 @@ function StepIllustration({ step }: { step: number }) {
         <rect x="90" y="80" width="40" height="24" rx="6" fill="#fef3c7" />
         <rect x="90" y="110" width="40" height="24" rx="6" fill="#e8f5f1" />
         <rect x="150" y="65" width="30" height="36" rx="4" fill="white" stroke="#16a085" strokeWidth="1" />
-        <text x="165" y="87" textAnchor="middle" fill="#16a085" fontSize="8" fontFamily="DM Sans">SDC</text>
+        <text x="165" y="87" textAnchor="middle" fill="#16a085" fontSize="8" fontFamily={fontFamily}>SDC</text>
       </svg>
     ),
     3: (
       <svg viewBox="0 0 200 160" fill="none" className="w-48 h-auto">
         <rect x="30" y="30" width="140" height="100" rx="12" fill="white" stroke="#e5e7eb" strokeWidth="1.5" />
         <polyline points="50,100 70,85 90,90 110,60 130,55 150,45" fill="none" stroke="#16a085" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        <text x="50" y="120" fill="#9ca3af" fontSize="9" fontFamily="DM Sans, sans-serif">{t('hiw.flow.12months')}</text>
+        <text x="50" y="120" fill="#9ca3af" fontSize="9" fontFamily={fontFamily}>{t('hiw.flow.12months')}</text>
       </svg>
     ),
   };

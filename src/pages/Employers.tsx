@@ -168,22 +168,23 @@ export default function Employers() {
 }
 
 function DashboardMockup() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const fontFamily = language === 'ar' ? 'Noto Sans Arabic, DM Sans' : 'DM Sans';
 
   return (
     <svg viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
       {/* Top metrics */}
       <rect x="0" y="0" width="180" height="80" rx="10" fill="#f9fafb" stroke="#e5e7eb" strokeWidth="1" />
-      <text x="20" y="30" fill="#9ca3af" fontSize="11" fontFamily="DM Sans">{t('emp.mock.enrollment')}</text>
-      <text x="20" y="60" fill="#1a1a2e" fontSize="24" fontFamily="DM Sans" fontWeight="600">78%</text>
+      <text x="20" y="30" fill="#9ca3af" fontSize="11" fontFamily={fontFamily}>{t('emp.mock.enrollment')}</text>
+      <text x="20" y="60" fill="#1a1a2e" fontSize="24" fontFamily={fontFamily} fontWeight="600">78%</text>
 
       <rect x="200" y="0" width="180" height="80" rx="10" fill="#f9fafb" stroke="#e5e7eb" strokeWidth="1" />
-      <text x="220" y="30" fill="#9ca3af" fontSize="11" fontFamily="DM Sans">{t('emp.mock.aum')}</text>
-      <text x="220" y="60" fill="#1a1a2e" fontSize="24" fontFamily="DM Sans" fontWeight="600">JOD 1.2M</text>
+      <text x="220" y="30" fill="#9ca3af" fontSize="11" fontFamily={fontFamily}>{t('emp.mock.aum')}</text>
+      <text x="220" y="60" fill="#1a1a2e" fontSize="24" fontFamily={fontFamily} fontWeight="600">JOD 1.2M</text>
 
       {/* Bar chart */}
       <rect x="420" y="0" width="380" height="140" rx="10" fill="#f9fafb" stroke="#e5e7eb" strokeWidth="1" />
-      <text x="440" y="25" fill="#9ca3af" fontSize="11" fontFamily="DM Sans">{t('emp.mock.trends')}</text>
+      <text x="440" y="25" fill="#9ca3af" fontSize="11" fontFamily={fontFamily}>{t('emp.mock.trends')}</text>
       <rect x="455" y="45" width="24" height="85" rx="3" fill="#16a085" opacity="0.6" />
       <rect x="495" y="55" width="24" height="75" rx="3" fill="#16a085" opacity="0.65" />
       <rect x="535" y="35" width="24" height="95" rx="3" fill="#16a085" opacity="0.7" />
@@ -195,7 +196,7 @@ function DashboardMockup() {
 
       {/* Donut chart placeholder */}
       <rect x="0" y="100" width="380" height="200" rx="10" fill="#f9fafb" stroke="#e5e7eb" strokeWidth="1" />
-      <text x="20" y="125" fill="#9ca3af" fontSize="11" fontFamily="DM Sans">{t('emp.mock.participation')}</text>
+      <text x="20" y="125" fill="#9ca3af" fontSize="11" fontFamily={fontFamily}>{t('emp.mock.participation')}</text>
       <circle cx="190" cy="210" r="60" fill="none" stroke="#e5e7eb" strokeWidth="12" />
       <circle cx="190" cy="210" r="60" fill="none" stroke="#16a085" strokeWidth="12" strokeDasharray="200 377" strokeDashoffset="0" />
       <circle cx="190" cy="210" r="60" fill="none" stroke="#d4a843" strokeWidth="12" strokeDasharray="100 377" strokeDashoffset="-200" />
