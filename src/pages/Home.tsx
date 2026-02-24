@@ -21,9 +21,9 @@ export default function Home() {
               <p className="text-lg text-muted-foreground max-w-[520px] mb-4 leading-relaxed">
                 {t('home.hero.body')}
               </p>
-              <p className="text-[15px] text-gray-400 italic max-w-[520px] mb-4 leading-relaxed">
-                {t('home.hero.descriptor')}
-              </p>
+              
+
+
               <p className="text-[13px] text-muted-foreground uppercase tracking-widest font-medium mb-8">
                 {t('home.hero.trustline')}
               </p>
@@ -53,16 +53,16 @@ export default function Home() {
         <div className="container-content">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
-              { num: t('stats.1.num'), label: t('stats.1.label') },
-              { num: t('stats.2.num'), label: t('stats.2.label') },
-              { num: t('stats.3.num'), label: t('stats.3.label') },
-              { num: t('stats.4.num'), label: t('stats.4.label') },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center animate-fade-up">
+            { num: t('stats.1.num'), label: t('stats.1.label') },
+            { num: t('stats.2.num'), label: t('stats.2.label') },
+            { num: t('stats.3.num'), label: t('stats.3.label') },
+            { num: t('stats.4.num'), label: t('stats.4.label') }].
+            map((stat) =>
+            <div key={stat.label} className="text-center animate-fade-up">
                 <p className="text-[32px] font-serif text-navy mb-1">{stat.num}</p>
                 <p className="text-sm text-gray-500">{stat.label}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -75,22 +75,22 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Route, title: t('promise.simplicity.title'), desc: t('promise.simplicity.desc') },
-              { icon: ShieldCheck, title: t('promise.trust.title'), desc: t('promise.trust.desc') },
-              { icon: TrendingUp, title: t('promise.dignity.title'), desc: t('promise.dignity.desc') },
-            ].map((card, i) => (
-              <div
-                key={card.title}
-                className="card-masar text-center animate-fade-up"
-                style={{ animationDelay: `${i * 100}ms`, padding: '40px', border: '1px solid rgba(0,0,0,0.06)', borderTop: '3px solid hsl(168 73% 36%)' }}
-              >
+            { icon: Route, title: t('promise.simplicity.title'), desc: t('promise.simplicity.desc') },
+            { icon: ShieldCheck, title: t('promise.trust.title'), desc: t('promise.trust.desc') },
+            { icon: TrendingUp, title: t('promise.dignity.title'), desc: t('promise.dignity.desc') }].
+            map((card, i) =>
+            <div
+              key={card.title}
+              className="card-masar text-center animate-fade-up"
+              style={{ animationDelay: `${i * 100}ms`, padding: '40px', border: '1px solid rgba(0,0,0,0.06)', borderTop: '3px solid hsl(168 73% 36%)' }}>
+
                 <div className="w-14 h-14 rounded-full bg-teal-light flex items-center justify-center mx-auto mb-5">
                   <card.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-semibold text-navy mb-3">{card.title}</h3>
                 <p className="text-muted-foreground">{card.desc}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -140,16 +140,16 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Train, title: t('whyNow.rails.title'), desc: t('whyNow.rails.desc') },
-              { icon: Briefcase, title: t('whyNow.demand.title'), desc: t('whyNow.demand.desc') },
-              { icon: UserCheck, title: t('whyNow.youth.title'), desc: t('whyNow.youth.desc') },
-            ].map((item, i) => (
-              <div key={item.title} className="text-center animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+            { icon: Train, title: t('whyNow.rails.title'), desc: t('whyNow.rails.desc') },
+            { icon: Briefcase, title: t('whyNow.demand.title'), desc: t('whyNow.demand.desc') },
+            { icon: UserCheck, title: t('whyNow.youth.title'), desc: t('whyNow.youth.desc') }].
+            map((item, i) =>
+            <div key={item.title} className="text-center animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
                 <item.icon className="w-6 h-6 text-primary mx-auto mb-4" strokeWidth={1.5} />
                 <h3 className="text-base font-semibold text-navy mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-500">{item.desc}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -161,15 +161,15 @@ export default function Home() {
           <p className="text-gray-400 max-w-2xl mx-auto mb-12 animate-fade-up delay-100">{t('home.trust.body')}</p>
           <div className="flex flex-col sm:flex-row justify-center gap-12 mb-8 animate-fade-up delay-200">
             {[
-              { icon: ShieldCheck, label: t('home.trust.1') },
-              { icon: ShieldCheck, label: t('home.trust.2') },
-              { icon: ShieldCheck, label: t('home.trust.3') },
-            ].map((item) => (
-              <div key={item.label} className="flex flex-col items-center gap-3">
+            { icon: ShieldCheck, label: t('home.trust.1') },
+            { icon: ShieldCheck, label: t('home.trust.2') },
+            { icon: ShieldCheck, label: t('home.trust.3') }].
+            map((item) =>
+            <div key={item.label} className="flex flex-col items-center gap-3">
                 <item.icon className="w-6 h-6 text-white" strokeWidth={1.5} />
                 <span className="text-sm text-gray-300">{item.label}</span>
               </div>
-            ))}
+            )}
           </div>
           <Link to="/funds" className="text-teal-light text-sm font-medium hover:underline inline-flex items-center gap-1">
             {t('home.trust.link')}
@@ -197,8 +197,8 @@ export default function Home() {
           <p className="text-xs text-muted-foreground">{t('disclaimer.short')}</p>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>);
+
 }
 
 function HeroIllustration() {
@@ -259,8 +259,8 @@ function HeroIllustration() {
       <text x={fundLabelX} y="40" fill="#1a1a2e" fontSize="15" fontFamily={font} fontWeight="600" textAnchor={fundAnchor}>
         {t('hero.illust.fundUnits')}
       </text>
-    </svg>
-  );
+    </svg>);
+
 }
 
 function FlowDiagram() {
@@ -350,6 +350,6 @@ function FlowDiagram() {
           </marker>
         </defs>
       </svg>
-    </div>
-  );
+    </div>);
+
 }
