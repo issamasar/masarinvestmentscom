@@ -302,7 +302,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.hero.headline': 'About MASAR',
     'about.hero.sub': 'Your hard work is worth more than a paycheck. Let your effort build your future.',
     'about.why.p1': "In Jordan and across the region, millions of working people have jobs, earn income, and pay their bills, but can't build real ownership. Investing feels complicated, expensive, or simply out of reach.",
-    'about.why.p2': 'An estimated JOD 2.5 billion sits in informal savings cooperatives and cash — not because people don\'t want to invest, but because the infrastructure doesn\'t exist. There is no regulated mechanism that enables wages, employer contributions, and everyday spending to flow seamlessly into capital markets at scale.',
+    'about.why.p2': "Billions are trapped outside the Markets, not because people don't want to invest, but because the infrastructure doesn't exist. There is no regulated mechanism that enables wages, employer contributions, and everyday spending to flow seamlessly into capital markets at scale.",
     'about.why.p3': 'MASAR is that bridge. We turn paychecks into ownership through habit-forming mechanics, employer matching, and regulator-native design. No trading expertise required. No financial background needed. Just consistent, small steps toward real asset ownership.',
 
     'about.founder.name': 'Issa Dallal',
@@ -670,7 +670,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.hero.headline': 'عن مسار',
     'about.hero.sub': 'عملك الجاد يستحق أكثر من مجرد راتب. دع جهدك يبني مستقبلك.',
     'about.why.p1': 'في الأردن وعبر المنطقة، ملايين العاملين لديهم وظائف ويكسبون دخلاً ويدفعون فواتيرهم، لكن لا يمكنهم بناء ملكية حقيقية. الاستثمار يبدو معقداً أو مكلفاً أو ببساطة بعيد المنال.',
-    'about.why.p2': 'ما يقدر بـ ٢.٥ مليار دينار يقبع في تعاونيات ادخار غير رسمية ونقد — ليس لأن الناس لا يريدون الاستثمار، بل لأن البنية التحتية غير موجودة.',
+    'about.why.p2': 'المليارات محاصرة خارج الأسواق، ليس لأن الناس لا يريدون الاستثمار، بل لأن البنية التحتية غير موجودة. لا توجد آلية منظمة تُمكّن الأجور ومساهمات أصحاب العمل والإنفاق اليومي من التدفق بسلاسة إلى أسواق رأس المال على نطاق واسع.',
     'about.why.p3': 'مسار هو ذلك الجسر. نحوّل الرواتب إلى ملكية من خلال آليات تكوين العادات، مطابقة صاحب العمل، وتصميم أصيل للتنظيم. لا حاجة لخبرة تداول. لا حاجة لخلفية مالية. فقط خطوات صغيرة ثابتة نحو ملكية أصول حقيقية.',
 
     'about.founder.name': 'عيسى دلال',
