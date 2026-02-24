@@ -161,7 +161,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.cta.headline': 'Start your MASAR journey.',
 
     // Employers
-    'emp.hero.headline': 'A benefit your team will actually use.',
+    'emp.hero.headline': 'A benefit built for the modern workforce.',
     'emp.hero.body': 'MASAR is a fully turn-key financial wellness benefit. No internal investment expertise. No fiduciary responsibility. No custodial handling. No operational overhead.',
     'emp.why.1.title': 'Zero Friction',
     'emp.why.1.desc': 'No advice obligations. No custody. No pension-like liabilities. MASAR handles the entire infrastructure — you just connect your payroll.',
@@ -529,7 +529,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.cta.headline': 'ابدأ رحلتك مع مسار.',
 
     // Employers
-    'emp.hero.headline': 'ميزة سيستخدمها فريقك فعلاً.',
+    'emp.hero.headline': 'ميزة مصممة للقوى العاملة الحديثة.',
     'emp.hero.body': 'مسار هو ميزة رفاهية مالية جاهزة بالكامل. لا حاجة لخبرة استثمارية داخلية. لا مسؤولية ائتمانية. لا تعامل مع الحفظ. لا عبء تشغيلي.',
     'emp.why.1.title': 'صفر احتكاك',
     'emp.why.1.desc': 'لا التزامات استشارية. لا حفظ. لا التزامات تشبه التقاعد. مسار يتولى البنية التحتية بالكامل — أنت فقط تربط نظام الرواتب.',
