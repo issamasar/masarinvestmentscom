@@ -213,7 +213,7 @@ const translations: Record<Language, Record<string, string>> = {
     'emp.start.3.title': 'Launch',
     'emp.start.3.desc': 'Your team onboards digitally. Contributions flow. You see results.',
 
-    'emp.outcomes.quote': '"Lower friction than traditional wellness programs. More durable impact than one-off bonuses. Easier to deploy than insurance or savings schemes."',
+    'emp.outcomes.quote': 'Lower friction than traditional wellness programs. More durable impact than one-off bonuses. Easier to deploy than insurance or savings schemes.\n',
     'emp.outcomes.1.num': '3x',
     'emp.outcomes.1.label': 'higher participation vs. voluntary-only schemes',
     'emp.outcomes.2.num': 'Zero',
@@ -581,7 +581,7 @@ const translations: Record<Language, Record<string, string>> = {
     'emp.start.3.title': 'أطلق',
     'emp.start.3.desc': 'فريقك يسجل رقمياً. المساهمات تتدفق. أنت ترى النتائج.',
 
-    'emp.outcomes.quote': '"احتكاك أقل من برامج الرفاهية التقليدية. تأثير أكثر استدامة من المكافآت لمرة واحدة. أسهل في النشر من التأمين أو خطط الادخار."',
+    'emp.outcomes.quote': 'احتكاك أقل من برامج الرفاهية التقليدية. تأثير أكثر استدامة من المكافآت لمرة واحدة. أسهل في النشر من التأمين أو خطط الادخار.\n',
     'emp.outcomes.1.num': '٣ أضعاف',
     'emp.outcomes.1.label': 'مشاركة أعلى مقارنة بالبرامج التطوعية فقط',
     'emp.outcomes.2.num': 'صفر',
