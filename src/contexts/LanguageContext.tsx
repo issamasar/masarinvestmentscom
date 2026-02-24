@@ -81,7 +81,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.paths.individuals.link': 'See how it works →',
     'home.paths.employers.label': 'For Employers',
     'home.paths.employers.title': 'A benefit your team will actually use.',
-    'home.paths.employers.body': 'Turn-key employee financial wellness with zero fiduciary risk. Retain & Incentivise your team with a real-life benefit, fit for the real world.',
+    'home.paths.employers.body': 'Turn-key employee financial wellness with zero fiduciary risk. Retain & Incentivize your team with a real-life benefit, fit for the real world.',
     'home.paths.employers.link': 'Learn more →',
 
     // Home — Trust
@@ -105,7 +105,7 @@ const translations: Record<Language, Record<string, string>> = {
     'finalCta.headline': 'Your future shouldn\'t depend on your financial background.',
 
     // How It Works
-    'hiw.hero.headline': 'Your Hard Work & Daily Spend, Transformed into Real Ownership',
+    'hiw.hero.headline': 'From Paycheck to Ownership',
     'hiw.hero.body': 'MASAR converts your salary contributions, employer matching, and everyday spending round-ups into a wealth engine tailored to your needs, growing while you live your life, seamlessly building your future for you.',
     'hiw.channels.title': 'Three ways your money flows in.',
     'hiw.channels.payroll.title': 'Payroll Split',
@@ -121,7 +121,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.steps.2.title': 'Invest',
     'hiw.steps.2.desc': 'Your contributions are pooled into the MASAR Umbrella Fund registered with the Securities Commission, then to the sleeve of your choosing. Every unit is recorded at the Securities Depository Center on a daily basis.',
     'hiw.steps.3.title': 'Track and Grow',
-    'hiw.steps.3.desc': 'See your units, their current value, your contribution streak, and distribution history, all in plain Language. Automatically reinvest or opt for cash. Your money compounds while you focus on your life.',
+    'hiw.steps.3.desc': 'See your units, their current value, your contribution streak, and distribution history, all in plain language. Automatically reinvest or opt for cash. Your money compounds while you focus on your life.',
 
     // HoW flow diagram
     'hiw.flow.salary': 'Salary',
