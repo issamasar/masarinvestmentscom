@@ -30,7 +30,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Home — Hero
     'home.hero.brand': 'MASAR',
-    'home.hero.headline': 'Your hard work, building your future while you sleep.',
+    'home.hero.headline': 'Let your effort build your future as you live your life.',
     'home.hero.body': 'MASAR turns small, recurring cashflows from your paycheck and daily spending into real, regulated investment assets. No expertise required. No complexity. Just consistent, compounding progress.',
     'home.hero.descriptor': 'A regulation-native micro-investment platform converting recurring payroll and spending flows into registered fund ownership.',
     'home.hero.trustline': 'Regulator-first · Partner-led rails · Transparent ownership',
@@ -398,7 +398,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Home — Hero
     'home.hero.brand': 'مسار',
-    'home.hero.headline': 'جهدك وتعبك، يبني مستقبلك وأنت نائم.',
+    'home.hero.headline': 'دع جهدك يبني مستقبلك وأنت تعيش حياتك.',
     'home.hero.body': 'مسار يحوّل التدفقات النقدية الصغيرة والمتكررة من راتبك ومصاريفك اليومية إلى أصول استثمارية حقيقية ومنظمة. لا حاجة لخبرة. لا تعقيد. فقط تقدم ثابت ومتراكم.',
     'home.hero.descriptor': 'منصة استثمار متناهي الصغر أصيلة التنظيم تحوّل تدفقات الرواتب والإنفاق المتكررة إلى ملكية صناديق مسجلة.',
     'home.hero.trustline': 'الأولوية للتنظيم · قنوات الشركاء · ملكية شفافة',
