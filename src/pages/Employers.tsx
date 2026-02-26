@@ -11,9 +11,9 @@ export default function Employers() {
     <Layout>
       {/* Hero */}
       <section className="section-padding bg-white">
-        <div className="container-content max-w-3xl animate-fade-up">
+        <div className="container-content max-w-4xl text-center animate-fade-up">
           <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-serif leading-[1.1] mb-6">{t('emp.hero.headline')}</h1>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8">{t('emp.hero.body')}</p>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">{t('emp.hero.body')}</p>
           <Link to="/contact#demo">
             <Button size="lg">
               {t('cta.bookDemo')}
