@@ -365,7 +365,7 @@ const translations: Record<Language, Record<string, string>> = {
     'form.emp.under50': 'Under 50',
 
     // Footer
-    'footer.description': 'Building ownership, one paycheck at a time.',
+    'footer.description': 'Transforming normal life into sustainable wealth.',
     'footer.product': 'Product',
     'footer.company': 'Company',
     'footer.newsletter': 'MASAR Insights',
@@ -733,7 +733,7 @@ const translations: Record<Language, Record<string, string>> = {
     'form.emp.under50': 'أقل من ٥٠',
 
     // Footer
-    'footer.description': 'بناء الملكية، راتب تلو راتب.',
+    'footer.description': 'تحويل الحياة العادية إلى ثروة مستدامة.',
     'footer.product': 'المنتج',
     'footer.company': 'الشركة',
     'footer.newsletter': 'رؤى مسار',
