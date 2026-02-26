@@ -117,7 +117,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.channels.note': 'All three channels flow into the same regulated fund. You choose how much comes from each.',
 
     'hiw.steps.1.title': 'Sign Up & Set Your Rules',
-    'hiw.steps.1.desc': 'Verify your identity digitally through SANAD. KYC and AML compliance are built in. The process takes minutes, not days, and is fully digital. Then choose your payroll split, activate round-ups on your bank card. If your employer offers matching, it activates automatically. You decide the rules once, and they run every cycle.',
+    'hiw.steps.1.desc': 'Verify your identity digitally through SANAD. The process takes minutes, not days, and is fully digital. Choose your payroll split and activate round-ups on your bank card. If your employer offers matching, it activates automatically. You decide the rules once, and they run every cycle.',
     'hiw.steps.2.title': 'Invest',
     'hiw.steps.2.desc': 'Your contributions are pooled into the MASAR Umbrella Fund registered with the Securities Commission, then to the sleeve of your choosing. Every unit is recorded at the Securities Depository Center on a daily basis.',
     'hiw.steps.3.title': 'Track and Grow',
@@ -485,7 +485,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hiw.channels.note': 'القنوات الثلاث تتدفق لنفس الصندوق المنظم. أنت تختار كم يأتي من كل قناة.',
 
     'hiw.steps.1.title': 'التسجيل واضبط قواعدك',
-    'hiw.steps.1.desc': 'تحقق من هويتك رقمياً عبر سند — الهوية الإلكترونية الوطنية مع أكثر من ٢ مليون مستخدم. الامتثال لـ KYC و AML مدمج. العملية تستغرق دقائق وليس أياماً. ثم اختر تقسيم راتبك — مبلغ ثابت بالدينار أو نسبة مئوية. اختيارياً، فعّل التقريب على بطاقتك البنكية. إذا قدّم صاحب عملك المطابقة، فهي تتفعل تلقائياً.',
+    'hiw.steps.1.desc': 'تحقق من هويتك رقمياً عبر سند. العملية تستغرق دقائق وليس أياماً، ورقمية بالكامل. اختر تقسيم راتبك وفعّل التقريب على بطاقتك البنكية. إذا قدّم صاحب عملك المطابقة، فهي تتفعل تلقائياً. تقرر القواعد مرة واحدة، وتعمل كل دورة.',
     'hiw.steps.2.title': 'أموالك تدخل الصندوق',
     'hiw.steps.2.desc': 'مساهماتك تُجمع في صندوق مسار المظلي — صندوق استثمار مشترك مفتوح مرخص من هيئة الأوراق المالية. تختار واحداً أو أكثر من ثلاثة أوعية. الوحدات تُشترى بصافي قيمة الأصول اليومية.',
     'hiw.steps.3.title': 'تتبع ونمو',
