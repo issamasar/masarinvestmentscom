@@ -105,7 +105,7 @@ const translations: Record<Language, Record<string, string>> = {
     'finalCta.headline': 'Your future shouldn\'t depend on your financial background.',
 
     // How It Works
-    'hiw.hero.headline': 'Your Effort, Transformed into Ownership',
+    'hiw.hero.headline': 'Your Hard Work & Normal Spend, Transformed into Ownership',
     'hiw.hero.body': 'MASAR converts your salary contributions, employer matching, and everyday spending round-ups into a wealth engine tailored to your needs, growing while you live your life, seamlessly building your future for you.',
     'hiw.channels.title': 'Three ways your money flows in.',
     'hiw.channels.payroll.title': 'Payroll Split',
@@ -473,7 +473,7 @@ const translations: Record<Language, Record<string, string>> = {
     'finalCta.headline': 'مستقبلك لا يجب أن يعتمد على خلفيتك المالية.',
 
     // How It Works
-    'hiw.hero.headline': 'جهدك، يتحول إلى ملكية',
+    'hiw.hero.headline': 'عملك الجاد وإنفاقك اليومي، يتحولان إلى ملكية',
     'hiw.hero.body': 'مسار يحوّل مساهمات راتبك، مطابقة صاحب العمل، وتقريب المصاريف اليومية إلى وحدات صندوق استثماري حقيقي مرخص من هيئة الأوراق المالية — كل شيء يعمل بهدوء في الخلفية.',
     'hiw.channels.title': 'ثلاث طرق لتدفق أموالك.',
     'hiw.channels.payroll.title': 'تقسيم الراتب',
