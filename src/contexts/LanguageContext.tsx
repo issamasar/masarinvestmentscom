@@ -85,7 +85,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.paths.employers.link': 'Learn more →',
 
     // Home — Trust
-    'home.trust.headline': 'An orchestration layer with the safety of Bank Custodians.',
+    'home.trust.headline': 'The missing layer of the financial system, paired the safety of Bank Custodians.',
     'home.trust.body': 'MASAR coordinates the flow. Independent institutions hold, record, and oversee.',
     'home.trust.1': 'JSC-Authorized Fund',
     'home.trust.2': 'SDC-Recorded Units',
@@ -453,7 +453,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.paths.employers.link': 'اعرف المزيد ←',
 
     // Home — Trust
-    'home.trust.headline': 'طبقة تنسيق، وليس أمين حفظ.',
+    'home.trust.headline': 'الطبقة المفقودة من النظام المالي، مقترنة بأمان أمناء الحفظ البنكيين.',
     'home.trust.body': 'مسار ينسق التدفق. مؤسسات مستقلة تحفظ وتسجل وتشرف.',
     'home.trust.1': 'صندوق مرخص من هيئة الأوراق المالية',
     'home.trust.2': 'وحدات مسجلة في مركز الإيداع',
