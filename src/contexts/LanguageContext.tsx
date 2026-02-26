@@ -39,7 +39,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.illust.salary': 'Salary',
     'hero.illust.roundups': 'Round-ups',
     'hero.illust.employer': 'Employer Match',
-    'hero.illust.fundUnits': 'Your Fund Units',
+    'hero.illust.fundUnits': 'Your Wealth',
 
     // Home — Stats
     'stats.1.num': '1.3M',
@@ -407,7 +407,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.illust.salary': 'الراتب',
     'hero.illust.roundups': 'التقريب',
     'hero.illust.employer': 'مطابقة صاحب العمل',
-    'hero.illust.fundUnits': 'وحداتك في الصندوق',
+    'hero.illust.fundUnits': 'ثروتك',
 
     // Home — Stats
     'stats.1.num': '١.٣ مليون',
